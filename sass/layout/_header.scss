@@ -1,6 +1,16 @@
 .header{
-  height: 100vh;
+  height: 95vh;
   position: relative;
+  background-image:
+          linear-gradient(to top right, rgba($color-primary,.8), rgba($color-primary-dark, .8)),
+          url("../img/office.jpg");
+  background-size: cover;
+  background-position: top;
 
-  background-image: url("");
+
+  &__text-box{
+    @include absCenter;
+    text-align: center;
+
+  }
 }
