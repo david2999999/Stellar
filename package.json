@@ -1,0 +1,17 @@
+{
+  "name": "stellar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "David Jiang",
+  "license": "ISC",
+  "dependencies": {
+    "backbone-model": "^1.0.10",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.7.2",
+    "underscore": "^1.8.3"
+  }
+}

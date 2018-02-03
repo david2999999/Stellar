@@ -1,0 +1,12 @@
+body{
+  font-family: "lato", sans-serif;
+}
+
+.heading-primary{
+  color: $color-white;
+  text-transform: uppercase;
+
+  // prevent the shake of the animation
+  backface-visibility: hidden;
+
+}

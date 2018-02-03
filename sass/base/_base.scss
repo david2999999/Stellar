@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+html{
+  // base font size will be 10
+  // 16 * 62.5% = 10
+  // the value of 10 will be used with rem all over the page
+  font-size: 62.5%;
+}
+
+body{
+  box-sizing: border-box;
+}
