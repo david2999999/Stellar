@@ -1,0 +1,67 @@
+.task-list{
+  transition: all .3s;
+  padding: 3rem;
+  color: $color-grey-dark;
+  position: relative;
+  backface-visibility: hidden;
+
+  &__item{
+    background-color: rgba($color-white, .8);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    height:auto;
+    margin: .2rem;
+    border-radius: 3px;
+    text-align: center;
+    width: 100%;
+    transition: all .3s;
+    position: relative;
+
+    &-icon{
+      font-size: 6rem;
+      padding: 1.2rem;
+      display: inline-block;
+      background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    &:hover{
+      transform: translateY(-2rem) scale(1.1);
+      opacity: 1;
+
+    }
+
+    &-num{
+      font-size: 3rem;
+      font-family: 'Lobster', cursive;
+      color: $color-primary;
+      position: absolute;
+      padding: 1.2rem 0 0 1.8rem;
+    }
+
+    &-button{
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+
+  }
+
+  &__title{
+    font-size: 1.9rem;
+    text-transform: uppercase;
+  }
+
+  &__description{
+    font-size: $task-font-size;
+    padding: 1rem;
+  }
+
+  &__due-date{
+    font-size: $task-font-size;
+    font-weight: bold;
+    padding-bottom: 3rem;
+  }
+
+
+}

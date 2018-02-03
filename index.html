@@ -5,8 +5,11 @@
     <title>Stellar</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/icon-fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
 </head>
 <body>
 
@@ -16,6 +19,22 @@
                 <div class="logo__text">Stellar</div>
             </div>
 
+            <div class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Users</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#task-list" class="nav__link">Tasks</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Sign up</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Log in</a>
+                        </li>
+                    </ul>
+            </div>
 
             <div class="header__text-box">
                 <h1 class="heading__primary">
@@ -23,8 +42,130 @@
                     <span class="heading__primary-sub">workflow is orchestrated</span>
                 </h1>
             </div>
-
     </header>
+
+    <section class="section-task ">
+        <div class="heading__secondary text-center" id="task-list">List of Tasks</div>
+
+        <div class="task-list row" >
+
+            <div class="col-lg-3 col-md-4 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">1</div>
+                    <i class="task-list__item-icon icon-software-font-underline"></i>
+                    <h1 class="task-list__title">HTML/CSS</h1>
+                    <p class="task-list__description">Create Front page of Website, deciding on User interfaces such as color theme and layout</p>
+                    <p class="task-list__due-date">Due Date: <span>2/21/2018</span></p>
+                    <div class="task-list__item-button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">2</div>
+                    <i class="task-list__item-icon icon-software-horizontal-align-center"></i>
+                    <h1 class="task-list__title">BackBoneJs</h1>
+                    <p class="task-list__description">Using the models, create a view using the template and then inject the views with attributes of the models.</p>
+                    <p class="task-list__due-date">Due Date: <span>2/30/2018</span></p>
+                    <div class="task-list__item-button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">3</div>
+                    <i class="task-list__item-icon icon-software-layers2"></i>
+                    <h1 class="task-list__title">Java</h1>
+                    <p class="task-list__description">Connect the website to the database, which will be used to persist data of models and users</p>
+                    <p class="task-list__due-date">Due Date: <span>2/29/2018</span></p>
+                    <div class="task-list__item-button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-12 form-group">
+            <div class="task-list__item">
+                <div class="task-list__item-num">4</div>
+                <i class="task-list__item-icon icon-software-horizontal-align-left"></i>
+                <h1 class="task-list__title ">JavaScript</h1>
+                <p class="task-list__description">Create,Read,Update,Delete users and tasks.</p>
+                <p class="task-list__due-date">Due Date: <span>2/22/2018</span></p>
+                <div class="task-list__item-button">
+                    <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                    <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">5</div>
+                    <i class="task-list__item-icon icon-software-horizontal-align-left"></i>
+                    <h1 class="task-list__title ">NodeJS</h1>
+                    <p class="task-list__description">responsible for writing server-side web application logic in JavaScript and/or variants of it, such as CoffeeScript, IcedCoffeeScript, </p>
+                    <p class="task-list__due-date">Due Date: <span>2/22/2018</span></p>
+                    <div class="task-list__item-button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">6</div>
+                    <i class="task-list__item-icon icon-software-horizontal-align-left"></i>
+                    <h1 class="task-list__title ">MongoDB</h1>
+                    <p class="task-list__description">MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands. </p>
+                    <p class="task-list__due-date">Due Date: <span>2/22/2018</span></p>
+                    <div class="task-list__item-button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">7</div>
+                    <i class="task-list__item-icon icon-software-horizontal-align-left"></i>
+                    <h1 class="task-list__title ">MySQL</h1>
+                    <p class="task-list__description">Create complex queries and improve your database application performance. Explore data design and more.</p>
+                    <p class="task-list__due-date">Due Date: <span>3/22/2018</span></p>
+                    <div class="task-list__item-button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">8</div>
+                    <i class="task-list__item-icon icon-software-horizontal-align-left"></i>
+                    <h1 class="task-list__title ">JavaScript</h1>
+                    <p class="task-list__description">Document traversal and manipulation, event handling, animation, and Ajax</p>
+                    <p class="task-list__due-date">Due Date: <span>4/22/2018</span></p>
+                    <div class="task-list__item-button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
 
 
 

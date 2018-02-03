@@ -1,5 +1,5 @@
 .header{
-  height: 95vh;
+  height: 100vh;
   position: relative;
   background-image:
           linear-gradient(to top right, rgba($color-primary,.8), rgba($color-primary-dark, .8)),
@@ -7,6 +7,8 @@
   background-size: cover;
   background-position: top;
 
+  //-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 
   &__text-box{
     @include absCenter;

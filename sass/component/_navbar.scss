@@ -1,0 +1,42 @@
+.nav{
+  color: white;
+  display: inline-block;
+  font-size: 2rem;
+  position: relative;
+  font-weight: 500;
+
+  &__list{
+    list-style: none;
+    position: absolute;
+    right:4rem;
+    top:5rem;
+  }
+
+  &__item{
+    display: inline-block;
+
+    &:not(:last-child){
+      margin-right: 4rem;
+    }
+  }
+
+  &__link{
+
+    &:link,
+    &:visited{
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all .3s;
+      backface-visibility: hidden;
+      text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    &:hover{
+      transform: scale(1.3);
+    }
+  }
+
+
+}
