@@ -1,0 +1,69 @@
+.user-list{
+  transition: all .3s;
+  padding: 3rem;
+  position: relative;
+  backface-visibility: hidden;
+
+  &__item{
+    background-color: rgba($color-white, .7);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    height:auto;
+    margin: .2rem;
+    border-radius: 3px;
+    text-align: center;
+    width: 100%;
+    transition: all .3s;
+    position: relative;
+    padding:4rem;
+
+    &-icon{
+      font-size: 6rem;
+      display: inline-block;
+      padding: 1rem;
+      background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+      -webkit-background-clip: text;
+      color: transparent;
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+    }
+
+    &:hover{
+      transform: translateY(-1.3rem);
+    }
+
+  }
+
+  &__name{
+    font-size: 2.2em;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__user-id{
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    padding-bottom: 1.4rem;
+  }
+
+  &__assigned-date, &__task-title, &__due-date{
+    font-size: $default-font-size;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__assigned-date{
+    color: $color-primary;
+  }
+
+  &__due-date{
+    color: $color-primary-dark-2;
+  }
+
+  &__task-desc{
+    font-size: $default-font-size;
+  }
+
+}

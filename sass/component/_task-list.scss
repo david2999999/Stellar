@@ -39,12 +39,6 @@
       padding: 1.2rem 0 0 1.8rem;
     }
 
-    &-button{
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
-    }
-
   }
 
   &__title{
@@ -61,6 +55,7 @@
     font-size: $task-font-size;
     font-weight: bold;
     padding-bottom: 3rem;
+    color: $color-primary-dark-2;
   }
 
 

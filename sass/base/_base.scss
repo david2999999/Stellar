@@ -15,19 +15,18 @@ a{
   text-decoration: none;
 }
 
-html{
+
+body, html {
   // base font size will be 10
   // 16 * 62.5% = 10
   // the value of 10 will be used with rem all over the page
-  font-size: 62.5%;
-
-  padding: 0;
-  margin: 0;
-}
-
-body {
   box-sizing: border-box;
+  font-size: 62.5%;
   padding: 0;
   margin: 0;
   background-color: $color-grey-light-2;
+
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
