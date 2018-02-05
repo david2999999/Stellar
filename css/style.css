@@ -539,9 +539,11 @@ textarea {
     font-size: 4rem;
     display: inline-block;
     line-height: 1;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: all .2s; }
   .form-popup__close:hover {
-    color: #00dbde; }
+    color: #fc00ff;
+    transform: scale(1.2); }
 
 .section-task {
   padding: 31rem 0 10rem 0;

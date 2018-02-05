@@ -29,10 +29,12 @@
       display: inline-block;
       line-height: 1;
       text-decoration: none;
+      transition: all .2s;
     }
 
     &:hover{
-      color: $color-primary;
+      color: $color-primary-dark;
+      transform: scale(1.2);
     }
 
   }

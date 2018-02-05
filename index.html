@@ -44,7 +44,7 @@
             </div>
     </header>
 
-    <section class="section-task ">
+    <section class="section-task">
         <div class="heading__secondary text-center" id="task-list">List of Tasks</div>
 
         <div class="task-list row" >
@@ -261,7 +261,7 @@
                     <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
                     <p class="user-list__due-date">Due Date: 2/22/2018</p>
                     <div class="button">
-                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <a href="#user-form"><button type="button" class="btn btn-lg btn-outline-info">Edit</button></a>
                         <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
                     </div>
                 </div>
@@ -352,12 +352,62 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <button class="button-primary button-primary-light">Confirm</button>
-                    <button class="button-primary button-primary-dark">Cancel</button>
+                    <a href="#section-user"><button class="button-primary button-primary-dark">Cancel</button></a>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="form-popup" id="task-form">
+        <div class="form">
+            <a href="#task-list" class="form-popup__close">&times;</a>
+            <div class="form__header">
+                <h2 class="heading__secondary text-center margin-bottom-small">
+                    Edit Task
+                </h2>
+            </div>
+            <div class="row margin-bottom-small">
+
+
+                <div class="col-lg-6 col-md-12">
+
+                    <div class="form__group">
+                        <label for="task-title" class="form__label">Task Title</label>
+                        <input type="text" class="form__input" placeholder="MongoDb" id="task-title">
+                    </div>
+
+                    <div class="form__textarea">
+                        <textarea name="task-descrip" id="description" cols="50" rows="8" maxlength="500">Task Description ...</textarea>
+                        <label for="description"></label>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 col-md-12">
+
+
+                    <div class="form__group">
+                        <label for="date-created" class="form__label">Date Created</label>
+                        <input type="date" class="form__input" placeholder="Date Assigned" id="date-created" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="due-date" class="form__label">Due Date</label>
+                        <input type="date" class="form__input" placeholder="Due Date" id="due-date" required>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <button class="button-primary button-primary-light">Confirm</button>
+                    <a href="#task-list"><button class="button-primary button-primary-dark">Cancel</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
     <script type="text/template" class="user-list-template">
