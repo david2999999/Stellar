@@ -151,7 +151,7 @@
                 <div class="task-list__item">
                     <div class="task-list__item-num">8</div>
                     <i class="task-list__item-icon icon-software-vertical-distribute-bottom"></i>
-                    <h1 class="task-list__title ">JavaScript</h1>
+                    <h1 class="task-list__title ">Jquery</h1>
                     <p class="task-list__description">Document traversal and manipulation, event handling, animation, and Ajax</p>
                     <p class="task-list__due-date">Due Date: <span>4/22/2018</span></p>
                     <div class="button">
@@ -160,6 +160,8 @@
                     </div>
                 </div>
             </div>
+
+
 
         </div>
     </section>
@@ -302,9 +304,99 @@
         </div>
     </footer>
 
+    <div class="form-popup">
+        <div class="form">
+
+            <div class="form__header">
+                <h2 class="heading__secondary text-center margin-bottom-small">
+                    Edit User
+                </h2>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Full Name</label>
+                        <input type="text" class="form__input" placeholder="Joshua Smith" id="name" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="role" class="form__label">Role</label>
+                        <input type="text" class="form__input" placeholder="Software Engineer" id="role">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="dateAssigned" class="form__label">Date Assigned</label>
+                        <input type="date" class="form__input" placeholder="Date Assigned" id="dateAssigned" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="dueDate" class="form__label">Due Date</label>
+                        <input type="date" class="form__input" placeholder="Due Date" id="dueDate" required>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+
+                    <div class="form__group">
+                        <label for="task" class="form__label">Task Title</label>
+                        <input type="text" class="form__input" placeholder="Frontend UI/UX" id="task">
+                    </div>
+
+                    <div class="form__textarea">
+                        <textarea name="task-descrip" id="task-description" cols="50" rows="8" maxlength="500">Task Description ...</textarea>
+                        <label for="task-description"></label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 </body>
-    <script src="js/lib/backbone-min.js"></script>
+    <script type="text/template" class="user-list-template">
+
+            <div class="user-list__item">
+                <i class="user-list__item-icon icon-software-pen"></i>
+                <h1 class="user-list__name"><%= fullName %></h1>
+                <div class="user-list__user-id">ID: <%= id %> <span class="user-list__role"><%= role %></span></div>
+                <p class="user-list__task-title">TASK: <%= taskTitle %></p>
+                <p class="user-list__task-desc"><%= taskDescription %></p>
+                <p class="user-list__assigned-date">Task Assigned: <%= taskAssignDate %> </p>
+                <p class="user-list__due-date">Due Date: <%= taskDueDate %> </p>
+
+                <% if(authenticate) { %>
+                <div class="button">
+                    <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                    <button type="button" class="btn btn-lg btn-outline-danger delete-user">Delete</button>
+                </div>
+                <% } %>
+            </div>
+
+    </script>
+
+    <script type="text/template" class="task-list-template">
+
+        <div class="task-list__item">
+            <div class="task-list__item-num"><%= id %></div>
+            <i class="task-list__item-icon icon-software-vertical-distribute-bottom"></i>
+            <h1 class="task-list__title "><%= taskTitle %></h1>
+            <p class="task-list__description"><%= taskDesc %></p>
+            <p class="task-list__due-date">Due Date: <span><%= dueDate %></span></p>
+            <div class="button">
+                <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                <button type="button" class="btn btn-lg btn-outline-danger delete-task">Delete</button>
+            </div>
+        </div>
+
+</script>
+
+
+    <script src="js/lib/jquery-min.js"></script>
     <script src="js/lib/modernizr-2.6.2.min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/backbone-min.js"></script>
+    <script src="js/script.js"></script>
+
 </html>

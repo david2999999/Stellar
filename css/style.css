@@ -23,6 +23,9 @@ body, html {
   height: 100%;
   overflow-x: hidden; }
 
+textarea {
+  resize: none; }
+
 body {
   font-family: "lato", sans-serif; }
 
@@ -174,6 +177,9 @@ body {
 .margin-bottom-small {
   margin-bottom: 4rem; }
 
+.margin-top-large {
+  padding-top: 30rem; }
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -192,6 +198,63 @@ body {
   position: absolute;
   right: 1rem;
   top: 1rem; }
+
+.form {
+  width: 75%;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+  display: block;
+  padding: 5rem;
+  color: #777;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  .form__input {
+    font-size: 2.2rem;
+    font-family: inherit;
+    color: inherit;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    transition: all .3s;
+    padding: 1rem;
+    margin-bottom: 2rem; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #00dbde; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #fc00ff; }
+  .form__textarea {
+    font-size: 2.2rem;
+    font-family: inherit;
+    color: #777;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    overflow: hidden;
+    text-overflow: clip;
+    padding: 2rem;
+    white-space: nowrap;
+    outline: none;
+    height: 30rem; }
+    .form__textarea:focus {
+      border-bottom: 3px solid red; }
+  .form__label {
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: #777;
+    padding-left: 1rem; }
+
+textarea {
+  color: inherit; }
 
 .logo {
   position: absolute;
@@ -248,12 +311,12 @@ body {
       font-size: 6rem;
       padding: 1.2rem;
       display: inline-block;
-      background-image: linear-gradient(to right, #00dbde, #fc00ff);
+      background-image: linear-gradient(to top right, #00dbde, #fc00ff);
       -webkit-background-clip: text;
       color: transparent; }
     .task-list__item:hover {
       transform: translateY(-2rem) scale(1.1);
-      opacity: 1; }
+      background-color: white; }
     .task-list__item-num {
       font-size: 3rem;
       font-family: 'Lobster', cursive;
@@ -321,11 +384,66 @@ body {
   .user-list__task-desc {
     font-size: 1.6rem; }
 
+.form {
+  width: 75%;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+  display: block;
+  padding: 5rem;
+  color: #777;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  .form__input {
+    font-size: 2.2rem;
+    font-family: inherit;
+    color: inherit;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    transition: all .3s;
+    padding: 1rem;
+    margin-bottom: 2rem; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #00dbde; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #fc00ff; }
+  .form__textarea {
+    font-size: 2.2rem;
+    font-family: inherit;
+    color: #777;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    overflow: hidden;
+    text-overflow: clip;
+    padding: 2rem;
+    white-space: nowrap;
+    outline: none;
+    height: 30rem; }
+    .form__textarea:focus {
+      border-bottom: 3px solid red; }
+  .form__label {
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: #777;
+    padding-left: 1rem; }
+
+textarea {
+  color: inherit; }
+
 .footer {
   background-color: black;
-  height: auto;
   font-size: 2rem;
-  position: relative;
   font-weight: 500;
   width: 100%;
   padding: 10rem; }
@@ -363,15 +481,19 @@ body {
     transform: translate(-50%, -70%);
     text-align: center; }
 
+.form-popup {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 0;
+  visibility: hidden; }
+
 .section-task {
-  padding: 31rem 0 60rem 0;
+  padding: 31rem 0 10rem 0;
   background-color: #eeeeee;
-  margin-top: -22rem; }
+  margin-top: -22rem;
+  width: 100%; }
 
 .section-user {
-  padding: 40rem 0 25rem 0;
-  margin-top: -64rem;
+  padding: 10rem;
   background-color: #eeeeee;
   background-image: linear-gradient(to top right, rgba(0, 219, 222, 0.8), rgba(252, 0, 255, 0.8)), url("../img/office2.jpg");
-  background-size: cover;
-  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%); }
+  background-size: cover; }

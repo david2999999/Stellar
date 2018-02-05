@@ -1,0 +1,68 @@
+.form{
+  width:75%;
+  background-color: $color-grey-light;
+  margin: 0 auto;
+  display: block;
+  padding: 5rem;
+  color: $color-grey-dark;
+  @include absCenter2;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+
+
+  &__input{
+    font-size: 2.2rem;
+    font-family: inherit;
+    color: inherit;
+    border-radius: 2px;
+    background-color: rgba($color-white, .5);
+    border:none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    transition: all .3s;
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    &:focus{
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, .1);
+      border-bottom: 3px solid $color-primary;
+    }
+
+    &:focus:invalid{
+      border-bottom: 3px solid $color-primary-dark;
+    }
+  }
+
+  &__textarea{
+    font-size: 2.2rem;
+    font-family: inherit;
+    color: $color-grey-dark;
+    border-radius: 2px;
+    background-color: rgba($color-white, .5);
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    overflow: hidden;
+    text-overflow: clip;
+    padding: 2rem;
+    white-space: nowrap;
+    outline: none;
+    height: 30rem;
+
+    &:focus{
+      border-bottom: 3px solid red;
+    }
+  }
+
+  &__label{
+    font-size: $default-font-size;
+    font-family: inherit;
+    color: $color-grey-dark;
+    padding-left:1rem;
+  }
+}
+
+textarea{
+  color: inherit;
+}
