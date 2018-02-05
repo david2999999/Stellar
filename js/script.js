@@ -5,7 +5,7 @@ var idGenerator2 = utility.idGen(0)
 var User = Backbone.Model.extend({
     defaults: {
         id: 0,
-        fullName: "",
+        fullName: '',
         role: "Member",
         authenticate: false,
         taskNumber: -1,
@@ -29,14 +29,14 @@ var Tasks = Backbone.Collection.extend({});
 
 var user1 = new User({
     id: idGenerator() ,
-    fullName: "David T.",
+    fullName: 'David T.',
     role: "Front-End Developer",
     authenticate: true,
     taskTitle: "MongoDB",
     taskNumber: 4,
     taskDescription: "MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands.",
     taskAssignDate: utility.formatDate(new Date()),
-    taskDueDate: "2/22/2018"
+    taskDueDate: "February 10 2018"
 });
 var user2 = new User({
     id: idGenerator() ,
@@ -47,7 +47,7 @@ var user2 = new User({
     taskNumber: 4,
     taskDescription: "Create,Read,Update,Delete users and tasks.",
     taskAssignDate: utility.formatDate(new Date()),
-    taskDueDate: "4/22/2018"
+    taskDueDate: "April 4 2018"
 });
 var user3 = new User({
     id: idGenerator() ,
@@ -58,7 +58,7 @@ var user3 = new User({
     taskNumber: 4,
     taskDescription: "MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands.",
     taskAssignDate: utility.formatDate(new Date()),
-    taskDueDate: "2/22/2018"
+    taskDueDate: "April 17 2018"
 });
 var user4 = new User({
     id: idGenerator() ,
@@ -69,7 +69,7 @@ var user4 = new User({
     taskNumber: 4,
     taskDescription: "Create,Read,Update,Delete users and tasks.",
     taskAssignDate: utility.formatDate(new Date()),
-    taskDueDate: "4/22/2018"
+    taskDueDate: "April 18 2018"
 });
 var users = new Users([user1, user2, user3, user4]);
 
@@ -80,28 +80,24 @@ var task1 = new Task({
     taskDesc: "Create Front page of Website, deciding on User interfaces such as color theme and layout",
     dueDate: "Due Date: 2/21/2018"
 });
-
 var task2 = new Task({
     id: idGenerator2(),
     taskTitle: "BACKBONEJS",
     taskDesc: "Using the models, create a view using the template and then inject the views with attributes of the models.",
     dueDate: "Due Date: 2/30/2018"
 });
-
 var task3 = new Task({
     id: idGenerator2(),
     taskTitle: "java",
     taskDesc: "Connect the website to the database, which will be used to persist data of models and users",
     dueDate: "Due Date: 2/29/2018"
 });
-
 var task4 = new Task({
     id: idGenerator2(),
     taskTitle: "javascript",
     taskDesc: "Create,Read,Update,Delete users and tasks",
     dueDate: "Due Date: 2/22/2018"
 });
-
 var tasks = new Tasks([task1, task2, task3, task4]);
 // =================================================================
 
@@ -110,8 +106,30 @@ var UserView = Backbone.View.extend({
     className: "col-lg-4 col-md-6 col-sm-12 form-group",
 
     events: {
-        'click .delete-user' : 'delete'
+        'click .delete-user' : 'delete',
+        'click .edit-user' : 'edit'
     },
+
+    edit: function () {
+
+        $(".fullName").html('<label for="name" class="form__label">Full Name</label>' +
+                        ' <input type="text" class="form__input" value="' + this.model.get('fullName') + '" id="name" required>');
+
+        $(".role").html('<label for="role" class="form__label">Role</label>' +
+                    '<input type="text" class="form__input" value="' + this.model.get('role') + '" id="role">');
+
+        $('.dateAssigned').html('<label for="dateAssigned" class="form__label">Date Assigned</label>' +
+            '<input type="text" class="form__input" value="' + this.model.get('taskAssignDate') + '" id="dateAssigned">');
+
+        $('.dueDate').html('<label for="dueDate" class="form__label">Due Date</label>\n' +
+            '                        <input type="text" class="form__input" value="' + this.model.get('taskDueDate') +'" id="dueDate">');
+
+        $('.task').html('<label for="task" class="form__label">Task Title</label>\n' +
+            '                        <input type="text" class="form__input" value="' + this.model.get('taskTitle') +'"id="task">');
+
+        $('.task-description').html(' <textarea name="task-descrip" id="task-description" cols="50" rows="8" maxlength="500">' + this.model.get('taskDescription')+ '</textarea>' +
+                                '<label for="task-description"></label>')
+        },
 
     delete: function () {
         users.remove(this.model);
@@ -192,7 +210,7 @@ var TaskViews = Backbone.View.extend({
 
 
 var userViews = new UserViews();
- // userViews.render();
+ userViews.render();
 
 var taskViews = new TaskViews();
 // taskViews.render();
