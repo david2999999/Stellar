@@ -11,8 +11,14 @@
 }
 
 a{
-  color: white;
-  text-decoration: none;
+  &:active,
+  &:visited{
+    text-decoration: none;
+  }
+
+  &:hover{
+    color: white;
+  }
 }
 
 
@@ -26,9 +32,10 @@ body, html {
   margin: 0;
   background-color: $color-grey-light-2;
 
-  width: 100%;
-  height: 100%;
+  //width: 100%;
+  //height: 100%;
   overflow-x: hidden;
+  //overflow: hidden;
 }
 
 textarea{

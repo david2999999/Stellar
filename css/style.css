@@ -9,9 +9,11 @@
   background: transparent;
   box-sizing: inherit; }
 
-a {
-  color: white;
+a:active, a:visited {
   text-decoration: none; }
+
+a:hover {
+  color: white; }
 
 body, html {
   box-sizing: border-box;
@@ -19,8 +21,6 @@ body, html {
   padding: 0;
   margin: 0;
   background-color: #eeeeee;
-  width: 100%;
-  height: 100%;
   overflow-x: hidden; }
 
 textarea {
@@ -201,7 +201,7 @@ body {
 
 .form {
   width: 75%;
-  background-color: #f7f7f7;
+  background-color: #eeeeee;
   margin: 0 auto;
   display: block;
   padding: 5rem;
@@ -244,9 +244,10 @@ body {
     padding: 2rem;
     white-space: nowrap;
     outline: none;
-    height: 30rem; }
-    .form__textarea:focus {
-      border-bottom: 3px solid red; }
+    height: 30rem;
+    transition: all .3s; }
+    .form__textarea:hover {
+      border-bottom: 3px solid #00dbde; }
   .form__label {
     font-size: 1.6rem;
     font-family: inherit;
@@ -333,7 +334,7 @@ textarea {
     font-size: 1.8rem;
     font-weight: bold;
     padding-bottom: 3rem;
-    color: purple; }
+    color: #EB3349; }
 
 .user-list {
   transition: all .3s;
@@ -380,13 +381,13 @@ textarea {
   .user-list__assigned-date {
     color: #00dbde; }
   .user-list__due-date {
-    color: purple; }
+    color: #EB3349; }
   .user-list__task-desc {
     font-size: 1.6rem; }
 
 .form {
   width: 75%;
-  background-color: #f7f7f7;
+  background-color: #eeeeee;
   margin: 0 auto;
   display: block;
   padding: 5rem;
@@ -429,9 +430,10 @@ textarea {
     padding: 2rem;
     white-space: nowrap;
     outline: none;
-    height: 30rem; }
-    .form__textarea:focus {
-      border-bottom: 3px solid red; }
+    height: 30rem;
+    transition: all .3s; }
+    .form__textarea:hover {
+      border-bottom: 3px solid #00dbde; }
   .form__label {
     font-size: 1.6rem;
     font-family: inherit;
@@ -440,6 +442,39 @@ textarea {
 
 textarea {
   color: inherit; }
+
+.button-primary {
+  padding: 1.6rem 6rem;
+  font-size: 1.8rem;
+  color: white;
+  border-radius: 30rem;
+  margin: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  transition: all .1s;
+  backface-visibility: hidden; }
+  .button-primary:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+    cursor: pointer; }
+  .button-primary:active {
+    transform: translateX(-3px) scale(1);
+    cursor: pointer; }
+  .button-primary:focus {
+    outline: 0; }
+  .button-primary-light {
+    background: #fc00ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top right, #00dbde, #1A2980);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top right, #00dbde, #1A2980);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  .button-primary-dark {
+    background: #fc00ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top right, #F45C43, #EB3349);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top right, #F45C43, #EB3349);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 .footer {
   background-color: black;
@@ -482,9 +517,31 @@ textarea {
     text-align: center; }
 
 .form-popup {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  height: 100vh;
   width: 0;
-  visibility: hidden; }
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+  top: 0;
+  left: 0; }
+  .form-popup:target {
+    opacity: 1;
+    visibility: visible;
+    width: 100%; }
+  .form-popup__close:link, .form-popup__close:visited {
+    position: absolute;
+    top: 3rem;
+    right: 3.5rem;
+    color: #777;
+    font-size: 4rem;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none; }
+  .form-popup__close:hover {
+    color: #00dbde; }
 
 .section-task {
   padding: 31rem 0 10rem 0;

@@ -1,13 +1,12 @@
 .form{
   width:75%;
-  background-color: $color-grey-light;
+  background-color: $color-grey-light-2;
   margin: 0 auto;
   display: block;
   padding: 5rem;
   color: $color-grey-dark;
   @include absCenter2;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-
 
   &__input{
     font-size: 2.2rem;
@@ -49,9 +48,14 @@
     white-space: nowrap;
     outline: none;
     height: 30rem;
+    transition: all .3s;
 
-    &:focus{
-      border-bottom: 3px solid red;
+    //&:focus{
+    //  border-bottom: 3px solid $color-primary;
+    //}
+
+    &:hover{
+      border-bottom: 3px solid $color-primary;
     }
   }
 
