@@ -371,12 +371,12 @@
 
                 <div class="col-lg-6 col-md-12">
 
-                    <div class="form__group">
+                    <div class="form__group task-title">
                         <label for="task-title" class="form__label">Task Title</label>
                         <input type="text" class="form__input" placeholder="MongoDb" id="task-title">
                     </div>
 
-                    <div class="form__textarea">
+                    <div class="form__textarea description">
                         <textarea name="task-descrip" id="description" cols="50" rows="8" maxlength="500">Task Description ...</textarea>
                         <label for="description"></label>
                     </div>
@@ -387,14 +387,14 @@
                 <div class="col-lg-6 col-md-12">
 
 
-                    <div class="form__group">
+                    <div class="form__group date-created">
                         <label for="date-created" class="form__label">Date Created</label>
-                        <input type="date" class="form__input" placeholder="Date Assigned" id="date-created" required>
+                        <input type="text" class="form__input" placeholder="Date Assigned" id="date-created" required>
                     </div>
 
-                    <div class="form__group">
+                    <div class="form__group due-date">
                         <label for="due-date" class="form__label">Due Date</label>
-                        <input type="date" class="form__input" placeholder="Due Date" id="due-date" required>
+                        <input type="text" class="form__input" placeholder="Due Date" id="due-date" required>
                     </div>
                 </div>
 
@@ -435,12 +435,13 @@
 
         <div class="task-list__item">
             <div class="task-list__item-num"><%= id %></div>
-            <i class="task-list__item-icon icon-software-vertical-distribute-bottom"></i>
+            <i class="task-list__item-icon"></i>
             <h1 class="task-list__title "><%= taskTitle %></h1>
             <p class="task-list__description"><%= taskDesc %></p>
+            <p class="task-list__created-date">Created Date: <span><%= dateCreated %></span></p>
             <p class="task-list__due-date">Due Date: <span><%= dueDate %></span></p>
             <div class="button">
-                <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                <a href="#task-form"><button type="button" class="btn btn-lg btn-outline-info edit-task">Edit</button></a>
                 <button type="button" class="btn btn-lg btn-outline-danger delete-task">Delete</button>
             </div>
         </div>

@@ -330,6 +330,10 @@ textarea {
   .task-list__description {
     font-size: 1.8rem;
     padding: 1rem; }
+  .task-list__created-date {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00dbde; }
   .task-list__due-date {
     font-size: 1.8rem;
     font-weight: bold;
@@ -546,13 +550,14 @@ textarea {
     transform: scale(1.2); }
 
 .section-task {
-  padding: 31rem 0 10rem 0;
+  padding: 31rem 0 40rem 0;
   background-color: #eeeeee;
   margin-top: -22rem;
   width: 100%; }
 
 .section-user {
   padding: 10rem;
+  padding-bottom: 40rem;
   background-color: #eeeeee;
   background-image: linear-gradient(to top right, rgba(0, 219, 222, 0.8), rgba(252, 0, 255, 0.8)), url("../img/office2.jpg");
   background-size: cover; }

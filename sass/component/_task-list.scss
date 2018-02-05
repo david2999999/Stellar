@@ -51,6 +51,12 @@
     padding: 1rem;
   }
 
+  &__created-date{
+    font-size: $task-font-size;
+    font-weight: bold;
+    color: $color-primary;
+  }
+
   &__due-date{
     font-size: $task-font-size;
     font-weight: bold;
