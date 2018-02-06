@@ -306,61 +306,7 @@
 
     <section class="allForms"></section>
 
-    <div class="form-popup" id="task-form">
-        <div class="form">
-            <a href="#task-list" class="form-popup__close">&times;</a>
-            <div class="form__header">
-                <h2 class="heading__secondary text-center margin-bottom-small">
-                    Edit Task
-                </h2>
-            </div>
-            <div class="row margin-bottom-small">
 
-
-                <div class="col-lg-6 col-md-12">
-
-                    <div class="form__taskId taskId">
-                        <label for="taskId" class="form__label">Task Id</label>
-                        <input type="text" class="form__input" placeholder="Task Id" id="taskId">
-                    </div>
-
-                    <div class="form__group task-title">
-                        <label for="task-title" class="form__label">Task Title</label>
-                        <input type="text" class="form__input" placeholder="MongoDb" id="task-title">
-                    </div>
-
-                    <div class="form__textarea description">
-                        <textarea name="task-descrip" id="description" cols="50" rows="8" maxlength="500">Task Description ...</textarea>
-                        <label for="description"></label>
-                    </div>
-
-                </div>
-
-
-                <div class="col-lg-6 col-md-12">
-
-
-                    <div class="form__group date-created">
-                        <label for="date-created" class="form__label">Date Created</label>
-                        <input type="text" class="form__input" placeholder="Date Assigned" id="date-created" required>
-                    </div>
-
-                    <div class="form__group due-date">
-                        <label for="due-date" class="form__label">Due Date</label>
-                        <input type="text" class="form__input" placeholder="Due Date" id="due-date" required>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <button class="button-primary button-primary-light">Confirm</button>
-                    <a href="#task-list"><button class="button-primary button-primary-dark">Cancel</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </body>
     <script type="text/template" class="user-list-template">
@@ -463,6 +409,64 @@
             </div>
         </div>
 
+    </script>
+
+    <script type="text/template" class="task-form-template">
+        <div class="form-popup" id="task-form">
+            <div class="form">
+                <a href="#task-list" class="form-popup__close">&times;</a>
+                <div class="form__header">
+                    <h2 class="heading__secondary text-center margin-bottom-small">
+                        Edit Task
+                    </h2>
+                </div>
+                <div class="row margin-bottom-small">
+
+
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="form__taskId taskId">
+                            <label for="taskId" class="form__label">Task Id</label>
+                            <input type="text" class="form__input" placeholder="Task Id" id="taskId">
+                        </div>
+
+                        <div class="form__group task-title">
+                            <label for="task-title" class="form__label">Task Title</label>
+                            <input type="text" class="form__input" placeholder="MongoDb" id="task-title">
+                        </div>
+
+                        <div class="form__textarea description">
+                            <textarea name="task-descrip" id="description" cols="50" rows="8" maxlength="500">Task Description ...</textarea>
+                            <label for="description"></label>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-12">
+
+
+                        <div class="form__group date-created">
+                            <label for="date-created" class="form__label">Date Created</label>
+                            <input type="text" class="form__input" placeholder="Date Assigned" id="date-created" required>
+                        </div>
+
+                        <div class="form__group due-date">
+                            <label for="due-date" class="form__label">Due Date</label>
+                            <input type="text" class="form__input" placeholder="Due Date" id="due-date" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <a href="#task-list"><button class="button-primary button-primary-light update-task">Confirm</button></a>
+                        <a href="#task-list"><button class="button-primary button-primary-dark">Cancel</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </script>
 
     <script src="js/lib/jquery-min.js"></script>

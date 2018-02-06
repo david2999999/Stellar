@@ -281,7 +281,14 @@ var TaskViews = Backbone.View.extend({
     el: $('.task-list'),
 
     initialize: function () {
+        var self = this;
+
         this.model.on('remove', this.render, this);
+        this.model.on('change', function () {
+            setTimeout(function () {
+                self.render();
+            }, 30);
+        }, this);
     },
 
     render: function () {
@@ -298,10 +305,12 @@ var UserFormView = Backbone.View.extend({
     el: $('.allForms'),
 
     events: {
-        'click .update-user': 'update'
+        'click .update-user': 'updateUser',
+
+        'click .update-task': 'updateTask'
     },
 
-    update: function () {
+    updateUser: function () {
         var userId = $('#userId').val();
         var user = users.get(userId);
 
@@ -313,25 +322,41 @@ var UserFormView = Backbone.View.extend({
         user.set('taskDescription', $('#task-description').val());
     },
 
+    updateTask: function () {
+        var taskId = $('#taskId').val();
+        var task = tasks.get(taskId);
+
+        task.set('taskTitle', $('#task-title').val());
+        task.set('taskDesc', $('#description').val());
+        task.set('dateCreated', $('#date-created').val());
+        task.set('dueDate', $('#due-date').val());
+    },
+
     initialize: function () {
         this.template = _.template($('.user-form-template').html());
+        this.template2 = _.template($('.task-form-template').html());
     },
 
     render: function () {
-        this.$el.html(' ');
         this.$el.append(this.template());
+        this.$el.append(this.template2());
         return this;
     }
 });
 
+
+
+
 var userViews = new UserViews();
- userViews.render();
-
 var taskViews = new TaskViews();
-taskViews.render();
-
 var userFormView = new UserFormView();
+
+
+userViews.render();
+taskViews.render();
 userFormView.render();
+
+
 
 
 
