@@ -22,6 +22,18 @@ body, html {
   margin: 0;
   background-color: #eeeeee;
   overflow-x: hidden; }
+  @media (max-width: 75em) {
+    body, html {
+      font-size: 56.25%; } }
+  @media (max-width: 62.5em) {
+    body, html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    body, html {
+      font-size: 45%; } }
+  @media (min-width: 112.5em) {
+    body, html {
+      font-size: 62.5%; } }
 
 textarea {
   resize: none; }
@@ -198,6 +210,12 @@ body {
   position: absolute;
   right: 1rem;
   top: 1rem; }
+  @media (max-width: 75em) {
+    .button {
+      right: .7rem;
+      top: .7rem;
+      display: block;
+      float: right; } }
 
 .form {
   width: 75%;
@@ -306,6 +324,12 @@ textarea {
   color: #777;
   position: relative;
   backface-visibility: hidden; }
+  @media (max-width: 75em) {
+    .task-list {
+      padding: 2.6rem; } }
+  @media (max-width: 62.5em) {
+    .task-list {
+      padding: 2.3rem; } }
   .task-list__item {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -318,11 +342,19 @@ textarea {
     position: relative; }
     .task-list__item-icon {
       font-size: 6rem;
-      padding: 1.2rem;
+      padding: 4.8rem 0 1.2rem 0;
       display: inline-block;
       background-image: linear-gradient(to top right, #00dbde, #fc00ff);
       -webkit-background-clip: text;
       color: transparent; }
+      @media (max-width: 75em) {
+        .task-list__item-icon {
+          font-size: 4rem;
+          padding: 4rem 0 1rem 0; } }
+      @media (max-width: 62.5em) {
+        .task-list__item-icon {
+          font-size: 3rem;
+          padding: 4rem 0 .8rem 0; } }
     .task-list__item:hover {
       transform: translateY(-2rem) scale(1.1);
       background-color: white; }
@@ -332,6 +364,14 @@ textarea {
       color: #00dbde;
       position: absolute;
       padding: 1.2rem 0 0 1.8rem; }
+      @media (max-width: 75em) {
+        .task-list__item-num {
+          font-size: 2.7rem;
+          padding: 1rem 0 0 1.6rem; } }
+      @media (max-width: 62.5em) {
+        .task-list__item-num {
+          font-size: 2.4rem;
+          padding: .8rem 0 0 1.4rem; } }
   .task-list__title {
     font-size: 1.9rem;
     text-transform: uppercase; }
@@ -342,11 +382,23 @@ textarea {
     font-size: 1.8rem;
     font-weight: bold;
     color: #00dbde; }
+    @media (max-width: 75em) {
+      .task-list__created-date {
+        font-size: 1.4rem; } }
+    @media (max-width: 62.5em) {
+      .task-list__created-date {
+        font-size: 1.2rem; } }
   .task-list__due-date {
     font-size: 1.8rem;
     font-weight: bold;
     padding-bottom: 3rem;
     color: #EB3349; }
+    @media (max-width: 75em) {
+      .task-list__due-date {
+        font-size: 1.4rem; } }
+    @media (max-width: 62.5em) {
+      .task-list__due-date {
+        font-size: 1.2rem; } }
 
 .user-list {
   transition: all .3s;
@@ -364,6 +416,14 @@ textarea {
     transition: all .3s;
     position: relative;
     padding: 4rem; }
+    @media (max-width: 75em) {
+      .user-list__item {
+        margin: .1rem;
+        padding: 3rem; } }
+    @media (max-width: 62.5em) {
+      .user-list__item {
+        margin: 0;
+        padding: 2rem; } }
     .user-list__item-icon {
       font-size: 6rem;
       display: inline-block;
@@ -374,22 +434,56 @@ textarea {
       position: absolute;
       left: 1rem;
       top: 1rem; }
+      @media (max-width: 75em) {
+        .user-list__item-icon {
+          font-size: 5rem;
+          padding: .8rem;
+          left: .2rem;
+          top: .2rem; } }
+      @media (max-width: 62.5em) {
+        .user-list__item-icon {
+          font-size: 4rem;
+          padding: .6rem;
+          left: .1rem;
+          top: .1rem; } }
     .user-list__item:hover {
       transform: translateY(-1.3rem); }
   .user-list__name {
     font-size: 2.2em;
+    padding-top: 1rem;
     text-transform: uppercase;
     background-image: linear-gradient(to right, #00dbde, #fc00ff);
     -webkit-background-clip: text;
     color: transparent; }
+    @media (max-width: 75em) {
+      .user-list__name {
+        font-size: 2rem; } }
+    @media (max-width: 62.5em) {
+      .user-list__name {
+        font-size: 1.8rem; } }
   .user-list__user-id {
     font-size: 1.7rem;
     text-transform: uppercase;
+    padding-top: .6rem;
     padding-bottom: 1.4rem; }
+    @media (max-width: 75em) {
+      .user-list__user-id {
+        font-size: 1.5rem;
+        padding-bottom: 1.2rem; } }
+    @media (max-width: 62.5em) {
+      .user-list__user-id {
+        font-size: 1.3rem;
+        padding-bottom: 1rem; } }
   .user-list__assigned-date, .user-list__task-title, .user-list__due-date {
     font-size: 1.6rem;
     font-weight: bold;
     text-transform: uppercase; }
+    @media (max-width: 75em) {
+      .user-list__assigned-date, .user-list__task-title, .user-list__due-date {
+        font-size: 1.5rem; } }
+    @media (max-width: 62.5em) {
+      .user-list__assigned-date, .user-list__task-title, .user-list__due-date {
+        font-size: 1.3rem; } }
   .user-list__assigned-date {
     color: #00dbde; }
   .user-list__due-date {

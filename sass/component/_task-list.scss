@@ -5,6 +5,14 @@
   position: relative;
   backface-visibility: hidden;
 
+  @include respond(tab-land) {
+    padding: 2.6rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 2.3rem;
+  }
+
   &__item{
     background-color: rgba($color-white, .8);
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
@@ -18,11 +26,22 @@
 
     &-icon{
       font-size: 6rem;
-      padding: 1.2rem;
+      padding: 4.8rem 0 1.2rem 0;
       display: inline-block;
       background-image: linear-gradient(to top right, $color-primary, $color-primary-dark);
       -webkit-background-clip: text;
       color: transparent;
+
+      @include respond(tab-land) {
+        font-size: 4rem;
+        padding: 4rem 0 1rem 0;
+
+      }
+
+      @include respond(tab-port) {
+        font-size: 3rem;
+        padding: 4rem 0 .8rem 0;
+      }
     }
 
     &:hover{
@@ -37,6 +56,17 @@
       color: $color-primary;
       position: absolute;
       padding: 1.2rem 0 0 1.8rem;
+
+      @include respond(tab-land) {
+        font-size: 2.7rem;
+        padding: 1rem 0 0 1.6rem;
+
+      }
+
+      @include respond(tab-port) {
+        font-size: 2.4rem;
+        padding: .8rem 0 0 1.4rem;
+      }
     }
 
   }
@@ -55,6 +85,14 @@
     font-size: $task-font-size;
     font-weight: bold;
     color: $color-primary;
+
+    @include respond(tab-land) {
+      font-size: 1.4rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+    }
   }
 
   &__due-date{
@@ -62,6 +100,14 @@
     font-weight: bold;
     padding-bottom: 3rem;
     color: $color-primary-dark-2;
+
+    @include respond(tab-land) {
+      font-size: 1.4rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+    }
   }
 
 

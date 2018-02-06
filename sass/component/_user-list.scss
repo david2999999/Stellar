@@ -16,6 +16,16 @@
     position: relative;
     padding:4rem;
 
+    @include respond(tab-land) {
+      margin: .1rem;
+      padding:3rem;
+    }
+
+    @include respond(tab-port) {
+      margin: 0;
+      padding:2rem;
+    }
+
     &-icon{
       font-size: 6rem;
       display: inline-block;
@@ -26,6 +36,20 @@
       position: absolute;
       left: 1rem;
       top: 1rem;
+
+      @include respond(tab-land) {
+        font-size: 5rem;
+        padding: .8rem;
+        left: .2rem;
+        top: .2rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 4rem;
+        padding: .6rem;
+        left: .1rem;
+        top: .1rem;
+      }
     }
 
     &:hover{
@@ -36,22 +60,50 @@
 
   &__name{
     font-size: 2.2em;
+    padding-top: 1rem;
     text-transform: uppercase;
     background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
     -webkit-background-clip: text;
     color: transparent;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
   }
 
   &__user-id{
     font-size: 1.7rem;
     text-transform: uppercase;
+    padding-top: .6rem;
     padding-bottom: 1.4rem;
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+      padding-bottom: 1.2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.3rem;
+      padding-bottom: 1rem;
+    }
   }
 
   &__assigned-date, &__task-title, &__due-date{
     font-size: $default-font-size;
     font-weight: bold;
     text-transform: uppercase;
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.3rem;
+    }
   }
 
   &__assigned-date{
