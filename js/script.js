@@ -1,6 +1,6 @@
 var utility = utilities();
-var idGenerator = utility.idGen(0)
-var idGenerator2 = utility.idGen(1)
+var idGenerator = utility.idGen(1);
+var idGenerator2 = utility.idGen(1);
 
 var User = Backbone.Model.extend({
     defaults: {
@@ -104,14 +104,14 @@ var task1 = new Task({
     id: idGenerator2(),
     taskTitle: "HTML/CSS",
     taskDesc: "Create Front page of Website, deciding on User interfaces such as color theme and layout",
-    dueDate: "FEBRUARY 21 2018",
+    dueDate: "February 21 2018",
     img: 'icon-software-font-underline'
 });
 var task2 = new Task({
     id: idGenerator2(),
     taskTitle: "BACKBONEJS",
     taskDesc: "Using the models, create a view using the template and then inject the views with attributes of the models.",
-    dueDate: "FEBRUARY 30 2018",
+    dueDate: "February 30 2018",
     img: 'icon-software-horizontal-align-center'
 });
 var task3 = new Task({
@@ -169,6 +169,8 @@ var UserView = Backbone.View.extend({
     },
 
     edit: function () {
+        $(".userId").html('<label for="userId" class="form__label">userId</label>' +
+            '<input type="text" class="form__input" value="' + this.model.get('id') + '" id="userId" required>')
 
         $(".fullName").html('<label for="name" class="form__label">Full Name</label>' +
                         ' <input type="text" class="form__input" value="' + this.model.get('fullName') + '" id="name" required>');
@@ -208,9 +210,15 @@ var UserViews = Backbone.View.extend({
     el: $('.user-list'),
 
     initialize: function () {
-        // var self = this;
+        var self = this;
 
         this.model.on('remove', this.render, this);
+
+        this.model.on('change', function () {
+            setTimeout(function () {
+                self.render();
+            }, 30);
+        }, this);
     },
 
     render: function () {
@@ -236,6 +244,9 @@ var TaskView = Backbone.View.extend({
     },
 
     edit: function () {
+        $('.taskId').html('<label for="taskId" class="form__label">Task Id</label>' +
+            '<input type="text" class="form__input" value="' + this.model.get('id') +'" id="taskId">');
+
         $('.task-title').html('<label for="task-title" class="form__label">Task Title</label>' +
             '<input type="text" class="form__input" placeholder="MongoDb" value="' + this.model.get('taskTitle') +'" id="task-title">');
 
@@ -283,12 +294,44 @@ var TaskViews = Backbone.View.extend({
     }
 });
 
+var UserFormView = Backbone.View.extend({
+    el: $('.allForms'),
+
+    events: {
+        'click .update-user': 'update'
+    },
+
+    update: function () {
+        var userId = $('#userId').val();
+        var user = users.get(userId);
+
+        user.set('fullName', $('#name').val());
+        user.set('role', $('#role').val());
+        user.set('taskAssignDate', $('#dateAssigned').val());
+        user.set('taskDueDate', $('#dueDate').val());
+        user.set('taskTitle', $('#task').val());
+        user.set('taskDescription', $('#task-description').val());
+    },
+
+    initialize: function () {
+        this.template = _.template($('.user-form-template').html());
+    },
+
+    render: function () {
+        this.$el.html(' ');
+        this.$el.append(this.template());
+        return this;
+    }
+});
 
 var userViews = new UserViews();
  userViews.render();
 
 var taskViews = new TaskViews();
 taskViews.render();
+
+var userFormView = new UserFormView();
+userFormView.render();
 
 
 

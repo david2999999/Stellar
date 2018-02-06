@@ -253,6 +253,14 @@ body {
     font-family: inherit;
     color: #777;
     padding-left: 1rem; }
+  .form__userId {
+    width: 0;
+    visibility: hidden;
+    display: none; }
+  .form__taskId {
+    width: 0;
+    display: none;
+    visibility: hidden; }
 
 textarea {
   color: inherit; }
@@ -443,6 +451,14 @@ textarea {
     font-family: inherit;
     color: #777;
     padding-left: 1rem; }
+  .form__userId {
+    width: 0;
+    visibility: hidden;
+    display: none; }
+  .form__taskId {
+    width: 0;
+    display: none;
+    visibility: hidden; }
 
 textarea {
   color: inherit; }
