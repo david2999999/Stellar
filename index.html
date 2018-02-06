@@ -45,7 +45,7 @@
     </header>
 
     <section class="section-task">
-        <div class="heading__secondary text-center" id="task-list">List of Tasks</div>
+        <div class="heading__secondary text-center margin-bottom-small" id="task-list">List of Tasks</div>
 
         <div class="task-list row" >
 
@@ -164,10 +164,12 @@
 
 
         </div>
+
+        <a href="#create-task-form"><button class="button-secondary button-secondary-light">Create Task</button></a>
     </section>
 
     <section class="section-user">
-        <div class="heading__tertiary text-center" id="section-user">Users and Tasks</div>
+        <div class="heading__tertiary text-center margin-bottom-small" id="section-user">Users and Tasks</div>
 
         <div class="user-list row">
 
@@ -269,6 +271,8 @@
 
 
         </div>
+
+        <button class="button-secondary button-secondary-light-2">Create User</button>
     </section>
 
     <footer class="footer">
@@ -412,6 +416,7 @@
     </script>
 
     <script type="text/template" class="task-form-template">
+
         <div class="form-popup" id="task-form">
             <div class="form">
                 <a href="#task-list" class="form-popup__close">&times;</a>
@@ -462,6 +467,64 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <a href="#task-list"><button class="button-primary button-primary-light update-task">Confirm</button></a>
+                        <a href="#task-list"><button class="button-primary button-primary-dark">Cancel</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" class="create-task-form-template">
+        <div class="form-popup" id="create-task-form">
+            <div class="form">
+                <a href="#task-list" class="form-popup__close">&times;</a>
+                <div class="form__header">
+                    <h2 class="heading__secondary text-center margin-bottom-small">
+                        Create New Task
+                    </h2>
+                </div>
+                <div class="row margin-bottom-small">
+
+
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="form__taskId taskId">
+                            <label for="newTaskId" class="form__label">New Task ID</label>
+                            <input type="text" class="form__input" placeholder="Task Id" id="newTaskId">
+                        </div>
+
+                        <div class="form__group task-title">
+                            <label for="new-task-title" class="form__label">Task Title</label>
+                            <input type="text" class="form__input" placeholder="Javascript" id="new-task-title">
+                        </div>
+
+                        <div class="form__textarea description">
+                            <textarea name="task-descrip" id="new-description" cols="50" rows="8" maxlength="500">Task Description ...</textarea>
+                            <label for="new-description"></label>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-12">
+
+
+                        <div class="form__group date-created">
+                            <label for="new-date-created" class="form__label">Date Created</label>
+                            <input type="text" class="form__input" placeholder="March 2 2018" id="new-date-created" required>
+                        </div>
+
+                        <div class="form__group due-date">
+                            <label for="new-due-date" class="form__label">Due Date</label>
+                            <input type="text" class="form__input" placeholder="March 9 2018" id="new-due-date" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <a href="#task-list"><button class="button-primary button-primary-light create-task">Confirm</button></a>
                         <a href="#task-list"><button class="button-primary button-primary-dark">Cancel</button></a>
                     </div>
                 </div>

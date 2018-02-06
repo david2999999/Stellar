@@ -13,11 +13,11 @@
 a{
   &:active,
   &:visited{
-    text-decoration: none;
+    text-decoration: none !important;
   }
 
   &:hover{
-    color: white;
+    text-decoration: none !important;
   }
 }
 

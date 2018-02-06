@@ -1,0 +1,13 @@
+.button{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+
+  @include respond(tab-land) {
+    right: .7rem;
+    top: .7rem;
+    display: block;
+    float: right;
+  }
+
+}

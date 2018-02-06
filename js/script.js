@@ -335,11 +335,14 @@ var UserFormView = Backbone.View.extend({
     initialize: function () {
         this.template = _.template($('.user-form-template').html());
         this.template2 = _.template($('.task-form-template').html());
+        this.template3 = _.template($('.create-task-form-template').html());
     },
 
     render: function () {
         this.$el.append(this.template());
         this.$el.append(this.template2());
+        this.$el.append(this.template3());
+
         return this;
     }
 });
