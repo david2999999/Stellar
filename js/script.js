@@ -384,7 +384,7 @@ var UserFormView = Backbone.View.extend({
           taskDesc: $('#new-description').val(),
           dateCreated: $('#new-date-created').val(),
           dueDate: $('#new-due-date').val(),
-          img: ''
+          img: utility.randomIcon()
       });
 
       tasks.add(task);
@@ -430,6 +430,55 @@ userFormView.render();
 
 
 function utilities() {
+
+    var icons = [
+        "icon-software-add-vectorpoint",
+        "icon-software-box-oval",
+        "icon-software-box-polygon",
+        "icon-software-box-rectangle",
+        "icon-software-box-roundedrectangle",
+        "icon-software-character",
+        "icon-software-crop",
+        "icon-software-eyedropper",
+        "icon-software-font-allcaps",
+        "icon-software-font-baseline-shift",
+        "icon-software-font-horizontal-scale",
+        "icon-software-font-kerning",
+        "icon-software-font-leading",
+        "icon-software-font-size",
+        "icon-software-font-smallcapital",
+        "icon-software-font-smallcaps",
+        "icon-software-font-strikethrough",
+        "icon-software-font-tracking",
+        "icon-software-font-underline",
+        "icon-software-font-vertical-scale",
+        "icon-software-horizontal-align-center",
+        "icon-software-horizontal-align-left",
+        "icon-software-horizontal-align-right",
+        "icon-software-horizontal-distribute-center",
+        "icon-software-horizontal-distribute-left",
+        "icon-software-horizontal-distribute-right",
+        "icon-software-indent-firstline",
+        "icon-software-indent-left",
+        "icon-software-indent-right",
+        "icon-software-lasso",
+        "icon-software-layers1",
+        "icon-software-layers2",
+        "icon-software-layout-header-2columns",
+        "icon-software-layout-header-3columns",
+        "icon-software-magnete",
+        "icon-software-paintroller",
+        "icon-software-reflect-horizontal",
+        "icon-software-reflect-vertical",
+        "icon-software-polygonallasso",
+        "icon-software-remove-vectorpoint",
+        "icon-software-scale-expand",
+        "icon-software-vertical-distribute-center",
+        "icon-software-vertical-distribute-top",
+        "icon-software-transform-bezier",
+        "icon-software-vertical-align-center"
+    ];
+
     return{
         formatDate : function (date) {
             var monthNames = [
@@ -468,6 +517,10 @@ function utilities() {
             $('#new-task').val('');
             $('#new-task-description').val('')
 
+        },
+
+        randomIcon: function () {
+            return icons[Math.floor(Math.random() * (icons.length-1))];
         }
     }
 }
