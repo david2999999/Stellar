@@ -330,7 +330,8 @@ var UserFormView = Backbone.View.extend({
         'click .update-task': 'updateTask',
 
         // events for create task form
-        'click .cancel-new-task': 'clearForm'
+        'click .cancel-new-task': 'clearForm',
+        'click .create-task' : 'createTask'
     },
 
     // method for user form
@@ -346,6 +347,24 @@ var UserFormView = Backbone.View.extend({
         user.set('taskDescription', $('#task-description').val());
     },
 
+
+    // method for create user form
+    createUser: function () {
+        var newUser = new User({
+            id: idGenerator(),
+            fullName: $('#new-name').val(),
+            role: $('#new-role').val(),
+            taskTitle: $('#new-task').val(),
+            taskDescription: $('#new-task-description').val(),
+            taskAssignDate:$('#new-dateAssigned').val(),
+            taskDueDate: $('#new-dueDate').val(),
+            authenticate: true
+        });
+
+        users.add(newUser);
+        utility.clearForm();
+    },
+
     // method for task form
     updateTask: function () {
         var taskId = $('#taskId').val();
@@ -357,19 +376,19 @@ var UserFormView = Backbone.View.extend({
         task.set('dueDate', $('#due-date').val());
     },
 
-    // method for create user form
-    createUser: function () {
-        var newUser = new User({
-            id: idGenerator(),
-            fullName: $('#new-name').val(),
-            role: $('#new-role').val(),
-            taskTitle: $('#new-task').val(),
-            taskDescription: $('#new-task-description').val(),
-            taskAssignDate:$('#new-dateAssigned').val(),
-            taskDueDate: $('#new-dueDate').val()
-        });
+    // method to create task form
+    createTask: function () {
+      var task = new Task({
+          id: idGenerator2(),
+          taskTitle: $('#new-task-title').val(),
+          taskDesc: $('#new-description').val(),
+          dateCreated: $('#new-date-created').val(),
+          dueDate: $('#new-due-date').val(),
+          img: ''
+      });
 
-        users.add(newUser);
+      tasks.add(task);
+      utility.clearForm();
     },
 
     // method for all forms
