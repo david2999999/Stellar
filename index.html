@@ -272,7 +272,7 @@
 
         </div>
 
-        <button class="button-secondary button-secondary-light-2">Create User</button>
+        <a href="#create-user-form"><button class="button-secondary button-secondary-light-2">Create User</button></a>
     </section>
 
     <footer class="footer">
@@ -531,6 +531,70 @@
             </div>
         </div>
     </script>
+
+    <script type="text/template" class="create-user-form-template">
+    <div class="form-popup" id="create-user-form">
+        <div class="form">
+            <a href="#section-user" class="form-popup__close">&times;</a>
+            <div class="form__header">
+                <h2 class="heading__secondary text-center margin-bottom-small">
+                    Create New User
+                </h2>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6 col-md-12">
+
+                    <div class="form__userId userId">
+                        <label for="new-userId" class="form__label">New User ID</label>
+                        <input type="text" class="form__input" placeholder="userID" id="new-userId" required>
+                    </div>
+
+
+                    <div class="form__group fullName">
+                        <label for="new-name" class="form__label">Full Name</label>
+                        <input type="text" class="form__input" placeholder="Joshua Smith" id="new-name" required>
+                    </div>
+
+                    <div class="form__group role">
+                        <label for="new-role" class="form__label">Role</label>
+                        <input type="text" class="form__input" placeholder="Software Engineer" id="new-role">
+                    </div>
+
+                    <div class="form__group dateAssigned">
+                        <label for="new-dateAssigned" class="form__label">Date Assigned</label>
+                        <input type="text" class="form__input" placeholder="May 1 2018" id="new-dateAssigned">
+                    </div>
+
+                    <div class="form__group dueDate">
+                        <label for="new-dueDate" class="form__label">Due Date</label>
+                        <input type="text" class="form__input" placeholder="May 28 2018" id="new-dueDate">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+
+                    <div class="form__group task">
+                        <label for="new-task" class="form__label">Task Title</label>
+                        <input type="text" class="form__input" placeholder="Frontend UI/UX" id="new-task">
+                    </div>
+
+                    <div class="form__textarea task-description">
+                        <textarea name="task-descrip" id="new-task-description" cols="50" rows="8" maxlength="500">Task Description ...</textarea>
+                        <label for="new-task-description"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="#section-user"><button class="button-primary button-primary-light create-user">Confirm</button></a>
+                    <a href="#section-user"><button class="button-primary button-primary-dark">Cancel</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</script>
 
     <script src="js/lib/jquery-min.js"></script>
     <script src="js/lib/modernizr-2.6.2.min.js"></script>
