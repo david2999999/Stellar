@@ -305,9 +305,17 @@ var UserFormView = Backbone.View.extend({
     el: $('.allForms'),
 
     events: {
+        // events for user form
         'click .update-user': 'updateUser',
 
-        'click .update-task': 'updateTask'
+        // events for create user form
+        'click .cancel-create-user': 'clearForm',
+
+        // events for task form
+        'click .update-task': 'updateTask',
+
+        // events for create task form
+        'click .cancel-new-task': 'clearForm'
     },
 
     updateUser: function () {
@@ -332,6 +340,10 @@ var UserFormView = Backbone.View.extend({
         task.set('dueDate', $('#due-date').val());
     },
 
+    clearForm: function () {
+      utility.clearForm();
+    },
+    
     initialize: function () {
         this.template = _.template($('.user-form-template').html());
         this.template2 = _.template($('.task-form-template').html());
@@ -381,13 +393,29 @@ function utilities() {
 
             return monthNames[monthIndex] + ' ' + day + ' ' + year;
         },
-
-
+        
         idGen: function (start) {
             var id = start;
             return function() {
                 return id++;
             }
+        },
+        
+        clearForm: function () {
+            // clears the form in create task form
+            $('#new-task-title').val('');
+            $('#new-description').val('');
+            $('#new-date-created').val('');
+            $('#new-due-date').val('');
+
+            // clears the form in the create user form
+            $('#new-name').val('');
+            $('#new-role').val('');
+            $('#new-dateAssigned').val('');
+            $('#new-dueDate').val('');
+            $('#new-task').val('');
+            $('#new-task-description').val('')
+
         }
     }
 }
