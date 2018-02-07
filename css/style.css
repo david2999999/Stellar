@@ -439,7 +439,7 @@ textarea {
       transform: translateY(-1.3rem); }
   .user-list__name {
     font-size: 2.2em;
-    padding-top: 1rem;
+    padding-top: 1.3rem;
     text-transform: uppercase;
     background-image: linear-gradient(to right, #00dbde, #fc00ff);
     -webkit-background-clip: text;
@@ -658,6 +658,12 @@ textarea {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+  @media (max-width: 75em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); } }
+  @media (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%); } }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -695,9 +701,9 @@ textarea {
     transform: scale(1.2); }
 
 .section-task {
-  padding: 31rem 0 12rem 0;
+  padding: 80rem 0 12rem 0;
   background-color: #eeeeee;
-  margin-top: -22rem;
+  margin-top: -75rem;
   width: 100%; }
 
 .section-user {

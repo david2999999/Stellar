@@ -1,8 +1,12 @@
 .section-task{
-  padding: 31rem 0 12rem 0;
+  padding: 80rem 0 12rem 0;
   background-color: $color-grey-light-2;
-  margin-top: -22rem;
+  margin-top: -75rem;
   width: 100%;
+
+  //@include respond(tab-port){
+  //  margin-top: -26rem;
+  //}
 }
 
 .section-user{

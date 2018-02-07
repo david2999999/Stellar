@@ -1,7 +1,10 @@
+// using utility function,
+// utilities returns an object with methods
 var utility = utilities();
 var idGenerator = utility.idGen(1);
 var idGenerator2 = utility.idGen(1);
 
+// user model declaration
 var User = Backbone.Model.extend({
     defaults: {
         id: 0,
@@ -16,8 +19,10 @@ var User = Backbone.Model.extend({
     }
 });
 
+// users collection declaration
 var Users = Backbone.Collection.extend({});
 
+// task model declaration
 var Task = Backbone.Model.extend({
     defaults: {
         id: 0,
@@ -29,8 +34,10 @@ var Task = Backbone.Model.extend({
     }
 });
 
+// tasks model declaration
 var Tasks = Backbone.Collection.extend({});
 
+// create a list of users. This will be removed when the database is implemented
 var user1 = new User({
     id: idGenerator() ,
     fullName: 'CHRISTOPHER T.',
@@ -99,7 +106,7 @@ var user6 = new User({
 });
 var users = new Users([user1, user2, user3, user4,user5,user6]);
 
-
+// create a list of tasks. This will be removed when the database is implemented
 var task1 = new Task({
     id: idGenerator2(),
     taskTitle: "HTML/CSS",
@@ -159,6 +166,7 @@ var task8 = new Task({
 var tasks = new Tasks([task1, task2, task3, task4, task5, task6, task7, task8]);
 // =================================================================
 
+// create the view for the user
 var UserView = Backbone.View.extend({
     model: new User(),
     className: "col-lg-4 col-md-6 col-sm-12 form-group",
@@ -305,6 +313,8 @@ var UserFormView = Backbone.View.extend({
     el: $('.allForms'),
 
     events: {
+        //events for all forms
+        'click .form-popup__close': 'clearForm',
         // events for user form
         'click .update-user': 'updateUser',
 
@@ -343,7 +353,7 @@ var UserFormView = Backbone.View.extend({
     clearForm: function () {
       utility.clearForm();
     },
-    
+
     initialize: function () {
         this.template = _.template($('.user-form-template').html());
         this.template2 = _.template($('.task-form-template').html());

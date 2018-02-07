@@ -10,6 +10,15 @@
   //-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 
+
+  @include respond(tab-land) {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
+
   &__text-box{
     @include absCenter;
     text-align: center;
