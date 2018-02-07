@@ -22,6 +22,9 @@ body, html {
   margin: 0;
   background-color: #eeeeee;
   overflow-x: hidden; }
+  @media (min-width: 112.5em) {
+    body, html {
+      font-size: 62.5%; } }
   @media (max-width: 75em) {
     body, html {
       font-size: 56.25%; } }
@@ -31,9 +34,6 @@ body, html {
   @media (max-width: 37.5em) {
     body, html {
       font-size: 45%; } }
-  @media (min-width: 112.5em) {
-    body, html {
-      font-size: 62.5%; } }
 
 textarea {
   resize: none; }
@@ -47,6 +47,12 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
   font-weight: 400; }
+  @media (max-width: 75em) {
+    .heading__primary {
+      margin-bottom: 5.6rem; } }
+  @media (max-width: 62.5em) {
+    .heading__primary {
+      margin-bottom: 5.2rem; } }
   .heading__primary-main {
     display: block;
     font-size: 9rem;
@@ -57,6 +63,14 @@ body {
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both; }
+    @media (max-width: 75em) {
+      .heading__primary-main {
+        font-size: 8.7rem;
+        letter-spacing: 3.2rem; } }
+    @media (max-width: 37.5em) {
+      .heading__primary-main {
+        font-size: 10rem;
+        letter-spacing: 2rem; } }
 
 @-webkit-keyframes bounceInRight {
   0%, 60%, 75%, 90%, 100% {
@@ -113,6 +127,9 @@ body {
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both; }
+  @media (max-width: 75em) {
+    .heading__primary {
+      font-size: 1.8rem; } }
 
 @-webkit-keyframes bounceInLeft {
   0%, 60%, 75%, 90%, 100% {
@@ -166,6 +183,12 @@ body {
   background-image: linear-gradient(to right, #00dbde, #fc00ff);
   -webkit-background-clip: text;
   color: transparent; }
+  @media (max-width: 75em) {
+    .heading__secondary {
+      font-size: 4.7rem; } }
+  @media (max-width: 62.5em) {
+    .heading__secondary {
+      font-size: 4.4rem; } }
 
 .heading__tertiary {
   font-size: 5rem;
@@ -173,12 +196,18 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   color: #fff; }
+  @media (max-width: 75em) {
+    .heading__tertiary {
+      font-size: 4.7rem; } }
+  @media (max-width: 62.5em) {
+    .heading__tertiary {
+      font-size: 4.4rem; } }
 
 .absCenter {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -70%); }
+  transform: translate(-50%, -80%); }
 
 .margin-bottom-large {
   margin-bottom: 8rem; }
@@ -342,8 +371,7 @@ textarea {
           padding: 4rem 0 1rem 0; } }
       @media (max-width: 62.5em) {
         .task-list__item-icon {
-          font-size: 3rem;
-          padding: 4rem 0 .8rem 0; } }
+          font-size: 5rem; } }
     .task-list__item:hover {
       transform: translateY(-2rem) scale(1.1);
       background-color: white; }
@@ -359,11 +387,13 @@ textarea {
           padding: 1rem 0 0 1.6rem; } }
       @media (max-width: 62.5em) {
         .task-list__item-num {
-          font-size: 2.4rem;
-          padding: .8rem 0 0 1.4rem; } }
+          font-size: 2.9rem; } }
   .task-list__title {
     font-size: 1.9rem;
     text-transform: uppercase; }
+    @media (max-width: 62.5em) {
+      .task-list__title {
+        font-size: 2.1rem; } }
   .task-list__description {
     font-size: 1.8rem;
     padding: 1rem; }
@@ -376,7 +406,7 @@ textarea {
         font-size: 1.4rem; } }
     @media (max-width: 62.5em) {
       .task-list__created-date {
-        font-size: 1.2rem; } }
+        font-size: 1.6rem; } }
   .task-list__due-date {
     font-size: 1.8rem;
     font-weight: bold;
@@ -387,7 +417,7 @@ textarea {
         font-size: 1.4rem; } }
     @media (max-width: 62.5em) {
       .task-list__due-date {
-        font-size: 1.2rem; } }
+        font-size: 1.6rem; } }
 
 .user-list {
   transition: all .3s;
@@ -436,7 +466,7 @@ textarea {
           left: .1rem;
           top: .1rem; } }
     .user-list__item:hover {
-      transform: translateY(-1.3rem); }
+      transform: translateY(-1.3rem) scale(1.01); }
   .user-list__name {
     font-size: 2.2em;
     padding-top: 1.3rem;
@@ -449,7 +479,7 @@ textarea {
         font-size: 2rem; } }
     @media (max-width: 62.5em) {
       .user-list__name {
-        font-size: 1.8rem; } }
+        font-size: 2.2rem; } }
   .user-list__user-id {
     font-size: 1.7rem;
     text-transform: uppercase;
@@ -459,10 +489,6 @@ textarea {
       .user-list__user-id {
         font-size: 1.5rem;
         padding-bottom: 1.2rem; } }
-    @media (max-width: 62.5em) {
-      .user-list__user-id {
-        font-size: 1.3rem;
-        padding-bottom: 1rem; } }
   .user-list__assigned-date, .user-list__task-title, .user-list__due-date {
     font-size: 1.6rem;
     font-weight: bold;
@@ -470,9 +496,6 @@ textarea {
     @media (max-width: 75em) {
       .user-list__assigned-date, .user-list__task-title, .user-list__due-date {
         font-size: 1.5rem; } }
-    @media (max-width: 62.5em) {
-      .user-list__assigned-date, .user-list__task-title, .user-list__due-date {
-        font-size: 1.3rem; } }
   .user-list__assigned-date {
     color: #00dbde; }
   .user-list__due-date {
@@ -555,6 +578,18 @@ textarea {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
   transition: all .1s;
   backface-visibility: hidden; }
+  @media (max-width: 75em) {
+    .button-primary {
+      padding: 1.4rem 5rem;
+      font-size: 1.6rem;
+      border-radius: 28rem;
+      box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.4); } }
+  @media (max-width: 62.5em) {
+    .button-primary {
+      padding: 1.3rem 5rem;
+      font-size: 1.5rem;
+      border-radius: 28rem;
+      box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.4); } }
   .button-primary:hover {
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
@@ -587,8 +622,22 @@ textarea {
   margin: 3rem auto;
   display: block;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-  transition: all .1s;
+  transition: all .3s;
   backface-visibility: hidden; }
+  @media (max-width: 75em) {
+    .button-secondary {
+      padding: 1.8rem 9rem;
+      font-size: 2.8rem;
+      border-radius: 28rem;
+      margin: 2.8rem auto;
+      box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.4); } }
+  @media (max-width: 62.5em) {
+    .button-secondary {
+      padding: 1.6rem 8rem;
+      font-size: 2.6rem;
+      border-radius: 26rem;
+      margin: 2.6rem auto;
+      box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.4); } }
   .button-secondary:hover {
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
@@ -618,12 +667,6 @@ textarea {
   position: absolute;
   right: 1rem;
   top: 1rem; }
-  @media (max-width: 75em) {
-    .button {
-      right: .7rem;
-      top: .7rem;
-      display: block;
-      float: right; } }
 
 .footer {
   background-color: black;
@@ -668,7 +711,7 @@ textarea {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -80%);
     text-align: center; }
 
 .form-popup {
@@ -705,10 +748,15 @@ textarea {
   background-color: #eeeeee;
   margin-top: -75rem;
   width: 100%; }
+  @media (max-width: 62.5em) {
+    .section-task {
+      padding: 80rem 5rem 12rem 5rem; } }
 
 .section-user {
-  padding: 10rem;
-  padding-bottom: 15rem;
+  padding: 10rem 0 15rem 0;
   background-color: #eeeeee;
   background-image: linear-gradient(to top right, rgba(0, 219, 222, 0.8), rgba(252, 0, 255, 0.8)), url("../img/office2.jpg");
   background-size: cover; }
+  @media (max-width: 62.5em) {
+    .section-user {
+      padding: 10rem 5rem 15rem 5rem; } }

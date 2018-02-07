@@ -39,8 +39,7 @@
       }
 
       @include respond(tab-port) {
-        font-size: 3rem;
-        padding: 4rem 0 .8rem 0;
+        font-size: 5rem;
       }
     }
 
@@ -64,8 +63,7 @@
       }
 
       @include respond(tab-port) {
-        font-size: 2.4rem;
-        padding: .8rem 0 0 1.4rem;
+        font-size: 2.9rem;
       }
     }
 
@@ -74,6 +72,10 @@
   &__title{
     font-size: 1.9rem;
     text-transform: uppercase;
+
+    @include respond(tab-port) {
+      font-size: 2.1rem;
+    }
   }
 
   &__description{
@@ -91,7 +93,7 @@
     }
 
     @include respond(tab-port) {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
     }
   }
 
@@ -106,7 +108,7 @@
     }
 
     @include respond(tab-port) {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
     }
   }
 

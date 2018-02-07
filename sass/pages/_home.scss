@@ -4,19 +4,21 @@
   margin-top: -75rem;
   width: 100%;
 
-  //@include respond(tab-port){
-  //  margin-top: -26rem;
-  //}
+  @include respond(tab-port) {
+    padding: 80rem 5rem 12rem 5rem;
+  }
 }
 
 .section-user{
-  padding: 10rem;
-  padding-bottom: 15rem;
+
+  padding: 10rem 0 15rem 0;
   background-color: $color-grey-light-2;
   background-image:
           linear-gradient(to top right, rgba($color-primary,.8), rgba($color-primary-dark, .8)),
           url("../img/office2.jpg");
   background-size: cover;
 
-  //clip-path: polygon(0% 15%, 100% 0, 100% 100%, 0 100%);
+  @include respond(tab-port) {
+    padding: 10rem 5rem 15rem 5rem;
+  }
 }

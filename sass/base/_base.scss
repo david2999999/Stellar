@@ -37,6 +37,9 @@ body, html {
   overflow-x: hidden;
   //overflow: hidden;
 
+  @include respond(big-desktop){
+    font-size: 62.5%;
+  }
 
   @include respond(tab-land){
     font-size: 56.25%;
@@ -50,9 +53,7 @@ body, html {
     font-size: 45%;
   }
 
-  @include respond(big-desktop){
-    font-size: 62.5%;
-  }
+
 }
 
 textarea{

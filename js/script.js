@@ -161,7 +161,7 @@ var task8 = new Task({
     taskTitle: "JQUERY",
     taskDesc: "Document traversal and manipulation, event handling, animation, and Ajax",
     dueDate: "February 30 2018",
-    img: 'icon-software-layout-header-4boxes'
+    img: 'icon-software-vertical-distribute-bottom'
 });
 var tasks = new Tasks([task1, task2, task3, task4, task5, task6, task7, task8]);
 // =================================================================
@@ -219,6 +219,8 @@ var UserViews = Backbone.View.extend({
 
     initialize: function () {
         var self = this;
+
+        this.model.on('add', this.render, this);
 
         this.model.on('remove', this.render, this);
 
@@ -291,6 +293,7 @@ var TaskViews = Backbone.View.extend({
     initialize: function () {
         var self = this;
 
+        this.model.on('add', this.render, this);
         this.model.on('remove', this.render, this);
         this.model.on('change', function () {
             setTimeout(function () {
@@ -315,11 +318,13 @@ var UserFormView = Backbone.View.extend({
     events: {
         //events for all forms
         'click .form-popup__close': 'clearForm',
+
         // events for user form
         'click .update-user': 'updateUser',
 
         // events for create user form
         'click .cancel-create-user': 'clearForm',
+        'click .create-user': 'createUser',
 
         // events for task form
         'click .update-task': 'updateTask',
@@ -328,6 +333,7 @@ var UserFormView = Backbone.View.extend({
         'click .cancel-new-task': 'clearForm'
     },
 
+    // method for user form
     updateUser: function () {
         var userId = $('#userId').val();
         var user = users.get(userId);
@@ -340,6 +346,7 @@ var UserFormView = Backbone.View.extend({
         user.set('taskDescription', $('#task-description').val());
     },
 
+    // method for task form
     updateTask: function () {
         var taskId = $('#taskId').val();
         var task = tasks.get(taskId);
@@ -350,6 +357,22 @@ var UserFormView = Backbone.View.extend({
         task.set('dueDate', $('#due-date').val());
     },
 
+    // method for create user form
+    createUser: function () {
+        var newUser = new User({
+            id: idGenerator(),
+            fullName: $('#new-name').val(),
+            role: $('#new-role').val(),
+            taskTitle: $('#new-task').val(),
+            taskDescription: $('#new-task-description').val(),
+            taskAssignDate:$('#new-dateAssigned').val(),
+            taskDueDate: $('#new-dueDate').val()
+        });
+
+        users.add(newUser);
+    },
+
+    // method for all forms
     clearForm: function () {
       utility.clearForm();
     },
@@ -429,5 +452,3 @@ function utilities() {
         }
     }
 }
-
-
