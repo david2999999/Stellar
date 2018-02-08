@@ -38,6 +38,10 @@ body, html {
 textarea {
   resize: none; }
 
+::selection {
+  background-color: #00dbde;
+  color: #fff; }
+
 body {
   font-family: "lato", sans-serif; }
 

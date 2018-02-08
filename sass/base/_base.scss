@@ -59,3 +59,8 @@ body, html {
 textarea{
   resize: none;
 }
+
+::selection{
+  background-color: $color-primary;
+  color: $color-white;
+}
