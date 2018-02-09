@@ -41,7 +41,7 @@ var Task = Backbone.Model.extend({
     },
 
     validate: function (attrs) {
-        if(!attrs.taskTitle || !attrs.taskDesc || !attrs.dueDate ||attrs.dateCreated){
+        if(!attrs.taskTitle || !attrs.taskDesc || !attrs.dueDate || !attrs.dateCreated){
             return "Task Title must not be blank";
         }
     }
@@ -363,7 +363,7 @@ var UserFormView = Backbone.View.extend({
             'taskTitle': $('#task').val(),
             'taskDescription': $('#task-description').val()
         });
-        
+
         if(updatedUser.isValid()){
             user.set({
                 'fullName': $('#name').val(),
@@ -373,6 +373,8 @@ var UserFormView = Backbone.View.extend({
                 'taskTitle': $('#task').val(),
                 'taskDescription': $('#task-description').val()
             });
+
+            console.log(user.toJSON());
         }
     },
 
@@ -410,6 +412,7 @@ var UserFormView = Backbone.View.extend({
             'dueDate': $('#due-date').val()
         });
 
+        console.log(updatedTask.isValid());
         if(updatedTask.isValid()){
             task.set({
                 'taskTitle': $('#task-title').val(),
