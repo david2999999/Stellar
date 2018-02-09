@@ -17,6 +17,13 @@ var User = Backbone.Model.extend({
         taskAssignDate: new Date(),
         taskDueDate: ""
     }
+    ,
+
+    validate: function (attrs) {
+        if(!attrs.fullName || !attrs.role){
+            return "Name must not be blank";
+        }
+    }
 });
 
 // users collection declaration
@@ -31,6 +38,12 @@ var Task = Backbone.Model.extend({
         dateCreated: utility.formatDate(new Date()),
         dueDate: '',
         img: ''
+    },
+
+    validate: function (attrs) {
+        if(!attrs.taskTitle || !attrs.taskDesc || !attrs.dueDate ||attrs.dateCreated){
+            return "Task Title must not be blank";
+        }
     }
 });
 
@@ -337,14 +350,30 @@ var UserFormView = Backbone.View.extend({
     // method for user form
     updateUser: function () {
         var userId = $('#userId').val();
+        // this is the original user
         var user = users.get(userId);
+        // this is the updated user
+        var updatedUser = user.clone();
 
-        user.set('fullName', $('#name').val());
-        user.set('role', $('#role').val());
-        user.set('taskAssignDate', $('#dateAssigned').val());
-        user.set('taskDueDate', $('#dueDate').val());
-        user.set('taskTitle', $('#task').val());
-        user.set('taskDescription', $('#task-description').val());
+        updatedUser.set({
+            'fullName': $('#name').val(),
+            'role': $('#role').val(),
+            'taskAssignDate': $('#dateAssigned').val(),
+            'taskDueDate': $('#dueDate').val(),
+            'taskTitle': $('#task').val(),
+            'taskDescription': $('#task-description').val()
+        });
+        
+        if(updatedUser.isValid()){
+            user.set({
+                'fullName': $('#name').val(),
+                'role': $('#role').val(),
+                'taskAssignDate': $('#dateAssigned').val(),
+                'taskDueDate': $('#dueDate').val(),
+                'taskTitle': $('#task').val(),
+                'taskDescription': $('#task-description').val()
+            });
+        }
     },
 
 
@@ -361,19 +390,34 @@ var UserFormView = Backbone.View.extend({
             authenticate: true
         });
 
-        users.add(newUser);
-        utility.clearForm();
+        if(newUser.isValid()){
+            users.add(newUser);
+            utility.clearForm();
+        }
+
     },
 
     // method for task form
     updateTask: function () {
         var taskId = $('#taskId').val();
         var task = tasks.get(taskId);
+        var updatedTask = task.clone();
 
-        task.set('taskTitle', $('#task-title').val());
-        task.set('taskDesc', $('#description').val());
-        task.set('dateCreated', $('#date-created').val());
-        task.set('dueDate', $('#due-date').val());
+        updatedTask.set({
+            'taskTitle': $('#task-title').val(),
+            'taskDesc': $('#description').val(),
+            'dateCreated': $('#date-created').val(),
+            'dueDate': $('#due-date').val()
+        });
+
+        if(updatedTask.isValid()){
+            task.set({
+                'taskTitle': $('#task-title').val(),
+                'taskDesc': $('#description').val(),
+                'dateCreated': $('#date-created').val(),
+                'dueDate': $('#due-date').val()
+            });
+        }
     },
 
     // method to create task form
@@ -387,8 +431,11 @@ var UserFormView = Backbone.View.extend({
           img: utility.randomIcon()
       });
 
-      tasks.add(task);
-      utility.clearForm();
+      if(task.isValid()){
+          tasks.add(task);
+          clearForm();
+      }
+
     },
 
     // method for all forms

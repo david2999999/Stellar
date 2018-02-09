@@ -353,7 +353,6 @@
 </script>
 
     <script type="text/template" class="user-form-template">
-        <form action="/" method="get">
 
             <div class="form-popup" id="user-form">
                 <div class="form">
@@ -369,7 +368,7 @@
 
                             <div class="form__userId userId">
                                 <label for="userId" class="form__label">userId</label>
-                                <input type="text" class="form__input" placeholder="userID" id="userId" required>
+                                <input type="text" class="form__input" placeholder="userID" id="userId">
                             </div>
 
 
@@ -380,7 +379,7 @@
 
                             <div class="form__group role">
                                 <label for="role" class="form__label">Role</label>
-                                <input type="text" class="form__input" placeholder="Software Engineer" id="role">
+                                <input type="text" class="form__input" placeholder="Software Engineer" id="role" required>
                             </div>
 
                             <div class="form__group dateAssigned">
@@ -416,14 +415,10 @@
                 </div>
             </div>
 
-        </form>
-
-
     </script>
 
     <script type="text/template" class="task-form-template">
 
-        <form action="/" method="get">
             <div class="form-popup" id="task-form">
                 <div class="form">
                     <a href="#task-list" class="form-popup__close">&times;</a>
@@ -444,7 +439,7 @@
 
                             <div class="form__group task-title">
                                 <label for="task-title" class="form__label">Task Title</label>
-                                <input type="text" class="form__input" placeholder="MongoDb" id="task-title">
+                                <input type="text" class="form__input" placeholder="MongoDb" id="task-title" required>
                             </div>
 
                             <div class="form__textarea description">
@@ -479,12 +474,10 @@
                     </div>
                 </div>
             </div>
-        </form>
     </script>
 
     <script type="text/template" class="create-task-form-template">
 
-        <form action="">
             <div class="form-popup" id="create-task-form">
                 <div class="form">
                     <a href="#task-list" class="form-popup__close">&times;</a>
@@ -505,7 +498,7 @@
 
                             <div class="form__group new-task-title">
                                 <label for="new-task-title" class="form__label">Task Title</label>
-                                <input type="text" class="form__input" placeholder="Javascript" id="new-task-title">
+                                <input type="text" class="form__input" placeholder="Javascript" id="new-task-title" required>
                             </div>
 
                             <div class="form__textarea new-description">
@@ -541,13 +534,12 @@
                 </div>
             </div>
 
-        </form>
 
     </script>
 
     <script type="text/template" class="create-user-form-template">
 
-        <form action="">
+
             <div class="form-popup" id="create-user-form">
                 <div class="form">
                     <a href="#section-user" class="form-popup__close">&times;</a>
@@ -602,14 +594,12 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <a href="#section-user"><button class="button-primary button-primary-light create-user">Confirm</button></a>
-                            <a href="#section-user"><button class="button-primary button-primary-dark cancel-create-user">Cancel</button></a>
+                            <a href="#section-user"><button class="button-primary button-primary-light create-user" type="submit">Confirm</button></a>
+                            <a href="#section-user"><button class="button-primary button-primary-dark cancel-create-user" type="button">Cancel</button></a>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </form>
 
 
 </script>
