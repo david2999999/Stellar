@@ -1,16 +1,30 @@
 .footer{
-  background-color: black;
+  background: #C04848;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   font-size: 2rem;
   font-weight: 500;
   width:100%;
-  padding: 10rem;
+  padding: 6rem 0 8rem 0;
+
+
+  &__logo{
+    font-size: 8rem;
+    font-family: Lobster, cursive;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0 4rem 0;
+    color: white;
+  }
+
 
   &__list{
     list-style: none;
 
     &-item{
       display: inline-block;
-
       &-link{
         &:link,
         &:visited{
@@ -29,7 +43,7 @@
       }
 
       &:hover &-link{
-        transform: scale(1.4) rotate(360deg);
+        transform: scale(1.4) rotate(-10deg);
         background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
         -webkit-background-clip: text;
         color: transparent;

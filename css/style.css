@@ -22,16 +22,16 @@ body, html {
   margin: 0;
   background-color: #eeeeee;
   overflow-x: hidden; }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     body, html {
       font-size: 62.5%; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     body, html {
       font-size: 56.25%; } }
-  @media (max-width: 62.5em) {
+  @media only screen and (max-width: 62.5em) {
     body, html {
       font-size: 50%; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     body, html {
       font-size: 45%; } }
 
@@ -51,10 +51,10 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
   font-weight: 400; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .heading__primary {
       margin-bottom: 5.6rem; } }
-  @media (max-width: 62.5em) {
+  @media only screen and (max-width: 62.5em) {
     .heading__primary {
       margin-bottom: 5.2rem; } }
   .heading__primary-main {
@@ -67,11 +67,11 @@ body {
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .heading__primary-main {
         font-size: 8.7rem;
         letter-spacing: 3.2rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading__primary-main {
         font-size: 10rem;
         letter-spacing: 2rem; } }
@@ -131,7 +131,7 @@ body {
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .heading__primary {
       font-size: 1.8rem; } }
 
@@ -187,10 +187,10 @@ body {
   background-image: linear-gradient(to right, #00dbde, #fc00ff);
   -webkit-background-clip: text;
   color: transparent; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .heading__secondary {
       font-size: 4.7rem; } }
-  @media (max-width: 62.5em) {
+  @media only screen and (max-width: 62.5em) {
     .heading__secondary {
       font-size: 4.4rem; } }
 
@@ -200,10 +200,10 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   color: #fff; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .heading__tertiary {
       font-size: 4.7rem; } }
-  @media (max-width: 62.5em) {
+  @media only screen and (max-width: 62.5em) {
     .heading__tertiary {
       font-size: 4.4rem; } }
 
@@ -346,10 +346,10 @@ textarea {
   color: #777;
   position: relative;
   backface-visibility: hidden; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .task-list {
       padding: 2.6rem; } }
-  @media (max-width: 62.5em) {
+  @media only screen and (max-width: 62.5em) {
     .task-list {
       padding: 2.3rem; } }
   .task-list__item {
@@ -369,11 +369,11 @@ textarea {
       background-image: linear-gradient(to top right, #00dbde, #fc00ff);
       -webkit-background-clip: text;
       color: transparent; }
-      @media (max-width: 75em) {
+      @media only screen and (max-width: 75em) {
         .task-list__item-icon {
           font-size: 4rem;
           padding: 4rem 0 1rem 0; } }
-      @media (max-width: 62.5em) {
+      @media only screen and (max-width: 62.5em) {
         .task-list__item-icon {
           font-size: 5rem; } }
     .task-list__item:hover {
@@ -385,17 +385,17 @@ textarea {
       color: #00dbde;
       position: absolute;
       padding: 1.2rem 0 0 1.8rem; }
-      @media (max-width: 75em) {
+      @media only screen and (max-width: 75em) {
         .task-list__item-num {
           font-size: 2.7rem;
           padding: 1rem 0 0 1.6rem; } }
-      @media (max-width: 62.5em) {
+      @media only screen and (max-width: 62.5em) {
         .task-list__item-num {
           font-size: 2.9rem; } }
   .task-list__title {
     font-size: 1.9rem;
     text-transform: uppercase; }
-    @media (max-width: 62.5em) {
+    @media only screen and (max-width: 62.5em) {
       .task-list__title {
         font-size: 2.1rem; } }
   .task-list__description {
@@ -405,10 +405,10 @@ textarea {
     font-size: 1.8rem;
     font-weight: bold;
     color: #00dbde; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .task-list__created-date {
         font-size: 1.4rem; } }
-    @media (max-width: 62.5em) {
+    @media only screen and (max-width: 62.5em) {
       .task-list__created-date {
         font-size: 1.6rem; } }
   .task-list__due-date {
@@ -416,10 +416,10 @@ textarea {
     font-weight: bold;
     padding-bottom: 3rem;
     color: #EB3349; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .task-list__due-date {
         font-size: 1.4rem; } }
-    @media (max-width: 62.5em) {
+    @media only screen and (max-width: 62.5em) {
       .task-list__due-date {
         font-size: 1.6rem; } }
 
@@ -439,11 +439,11 @@ textarea {
     transition: all .3s;
     position: relative;
     padding: 4rem; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .user-list__item {
         margin: .1rem;
         padding: 3rem; } }
-    @media (max-width: 62.5em) {
+    @media only screen and (max-width: 62.5em) {
       .user-list__item {
         margin: 0;
         padding: 2rem; } }
@@ -457,13 +457,13 @@ textarea {
       position: absolute;
       left: 1rem;
       top: 1rem; }
-      @media (max-width: 75em) {
+      @media only screen and (max-width: 75em) {
         .user-list__item-icon {
           font-size: 5rem;
           padding: .8rem;
           left: .2rem;
           top: .2rem; } }
-      @media (max-width: 62.5em) {
+      @media only screen and (max-width: 62.5em) {
         .user-list__item-icon {
           font-size: 4rem;
           padding: .6rem;
@@ -478,10 +478,10 @@ textarea {
     background-image: linear-gradient(to right, #00dbde, #fc00ff);
     -webkit-background-clip: text;
     color: transparent; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .user-list__name {
         font-size: 2rem; } }
-    @media (max-width: 62.5em) {
+    @media only screen and (max-width: 62.5em) {
       .user-list__name {
         font-size: 2.2rem; } }
   .user-list__user-id {
@@ -489,7 +489,7 @@ textarea {
     text-transform: uppercase;
     padding-top: .6rem;
     padding-bottom: 1.4rem; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .user-list__user-id {
         font-size: 1.5rem;
         padding-bottom: 1.2rem; } }
@@ -497,7 +497,7 @@ textarea {
     font-size: 1.6rem;
     font-weight: bold;
     text-transform: uppercase; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .user-list__assigned-date, .user-list__task-title, .user-list__due-date {
         font-size: 1.5rem; } }
   .user-list__assigned-date {
@@ -582,13 +582,13 @@ textarea {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
   transition: all .1s;
   backface-visibility: hidden; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .button-primary {
       padding: 1.4rem 5rem;
       font-size: 1.6rem;
       border-radius: 28rem;
       box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.4); } }
-  @media (max-width: 62.5em) {
+  @media only screen and (max-width: 62.5em) {
     .button-primary {
       padding: 1.3rem 5rem;
       font-size: 1.5rem;
@@ -628,14 +628,14 @@ textarea {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
   transition: all .3s;
   backface-visibility: hidden; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .button-secondary {
       padding: 1.8rem 9rem;
       font-size: 2.8rem;
       border-radius: 28rem;
       margin: 2.8rem auto;
       box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.4); } }
-  @media (max-width: 62.5em) {
+  @media only screen and (max-width: 62.5em) {
     .button-secondary {
       padding: 1.6rem 8rem;
       font-size: 2.6rem;
@@ -673,11 +673,24 @@ textarea {
   top: 1rem; }
 
 .footer {
-  background-color: black;
+  background: #C04848;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom right, #480048, #C04848);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, #480048, #C04848);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-size: 2rem;
   font-weight: 500;
   width: 100%;
-  padding: 10rem; }
+  padding: 6rem 0 8rem 0; }
+  .footer__logo {
+    font-size: 8rem;
+    font-family: Lobster, cursive;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0 4rem 0;
+    color: white; }
   .footer__list {
     list-style: none; }
     .footer__list-item {
@@ -693,7 +706,7 @@ textarea {
       .footer__list-item:not(:last-child) {
         margin-right: 5rem; }
       .footer__list-item:hover .footer__list-item-link {
-        transform: scale(1.4) rotate(360deg);
+        transform: scale(1.4) rotate(-10deg);
         background-image: linear-gradient(to right, #00dbde, #fc00ff);
         -webkit-background-clip: text;
         color: transparent; }
@@ -705,10 +718,10 @@ textarea {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%); } }
   .header__text-box {
@@ -752,7 +765,7 @@ textarea {
   background-color: #eeeeee;
   margin-top: -75rem;
   width: 100%; }
-  @media (max-width: 62.5em) {
+  @media only screen and (max-width: 62.5em) {
     .section-task {
       padding: 80rem 5rem 12rem 5rem; } }
 
@@ -761,6 +774,6 @@ textarea {
   background-color: #eeeeee;
   background-image: linear-gradient(to top right, rgba(0, 219, 222, 0.8), rgba(252, 0, 255, 0.8)), url("../img/office2.jpg");
   background-size: cover; }
-  @media (max-width: 62.5em) {
+  @media only screen and (max-width: 62.5em) {
     .section-user {
       padding: 10rem 5rem 15rem 5rem; } }
