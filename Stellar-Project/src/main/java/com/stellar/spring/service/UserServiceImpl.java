@@ -2,8 +2,11 @@ package com.stellar.spring.service;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import com.stellar.spring.domain.User;
 
+@Service
 public class UserServiceImpl implements UserService {
 
 	@Override

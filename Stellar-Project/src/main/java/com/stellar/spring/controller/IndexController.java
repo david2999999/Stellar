@@ -10,11 +10,11 @@ import com.stellar.spring.service.UserService;
 @Controller
 public class IndexController {
 	
-	UserService UserService;
+	private UserService UserService;
 	
 	@Autowired
 	public IndexController(UserService userService) {
-		UserService = userService;
+		this.UserService = userService;
 	}
 
 

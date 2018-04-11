@@ -1,4 +1,4 @@
-package com.stellar.spring.stellarproject;
+package com.stellar.spring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
