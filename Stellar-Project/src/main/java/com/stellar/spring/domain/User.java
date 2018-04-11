@@ -16,17 +16,16 @@ public class User {
 
 	private String lastName;
 
-	private String email;
+	@OneToOne(cascade=CascadeType.ALL)
+	private Email email;
 
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	private Role role;
 
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
 	private Task task;
 
-	@OneToOne
-	private Image imageUrl;
-	
-	
+	@OneToOne(cascade=CascadeType.ALL)
+	private Image image;
 	
 }

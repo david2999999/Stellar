@@ -2,10 +2,6 @@ package com.stellar.spring.domain;
 
 import static org.junit.Assert.*;
 
-import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -14,9 +10,6 @@ import org.mockito.MockitoAnnotations;
 public class TaskTest {
 
 	Task task;
-	
-	@Mock
-	Date date;
 	
 	@Mock
 	Image image;
@@ -41,32 +34,32 @@ public class TaskTest {
 	public void testGetDesc() throws Exception{
 		String desc = "This is a test";
 		
-		task.setDescription(desc);
+		task.setTitle(desc);
 		
-		assertEquals(task.getDescription(), desc);
+		assertEquals(task.getTitle(), desc);
 	}
 	
 	@Test
 	public void testGetDetail() throws Exception{
 		String detail = "This is a test";
 		
-		task.setDescription(detail);
+		task.setDetail(detail);
 		
-		assertEquals(task.getDescription(), detail);
+		assertEquals(task.getDetail(), detail);
 	}
 	
 	@Test
 	public void testDateCreated() throws Exception{
-		task.setCreatedDate(date);
+		task.setCreatedDate("April 11 2018");
 		
-		assertEquals(task.getCreatedDate(), date);
+		assertEquals(task.getCreatedDate(), "April 11 2018");
 	}
 	
 	@Test
 	public void testDueDate() throws Exception{
-		task.setDueDate(date);
+		task.setDueDate("February 21 2018");
 		
-		assertEquals(task.getDueDate(), date);
+		assertEquals(task.getDueDate(), "February 21 2018");
 	}
 	
 	@Test
@@ -75,19 +68,4 @@ public class TaskTest {
 		
 		assertEquals(task.getImage(), image);
 	}
-	
-	@Test
-	public void testGetUser() throws Exception{
-		
-		List<User> users = new ArrayList<User>();
-		
-		User user1 = new User();
-		
-		users.add(user1);
-		
-		task.setUsers(users);
-		
-		assertEquals(task.getUsers(), users);
-	}
-
 }
