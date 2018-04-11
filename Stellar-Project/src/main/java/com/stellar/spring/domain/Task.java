@@ -29,7 +29,7 @@ public class Task {
 	private Date dueDate;
 	
 	@OneToOne
-	private Image imageUrl;
+	private Image image;
 	
 	@OneToMany(mappedBy="task")
 	private List<User> users;

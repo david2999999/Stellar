@@ -18,7 +18,7 @@ public class IndexController {
 	}
 
 
-	@RequestMapping({"", "/", "/index"})
+	@RequestMapping({"", "/"})
 	public String getIndexPage(Model model) {
 		
 		model.addAttribute("user", UserService.getUsers());
