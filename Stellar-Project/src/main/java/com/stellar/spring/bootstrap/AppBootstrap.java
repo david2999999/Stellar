@@ -126,9 +126,58 @@ public class AppBootstrap implements ApplicationListener<ContextRefreshedEvent>{
 		user.setEmail(email);
 		user.setRole(role);
 		user.setTask(task);
-		user.setImage(fontUnderline);
+		user.setImage(softwarePen);
 		
 		users.add(user);
+		
+		// CREATING USERS 
+		Task task1 = new Task();
+		task1.setTitle("BACKBONEJS");
+		task1.setDetail("Using the models, create a view using the template and then inject the views with attributes of the models.");
+		task1.setCreatedDate("April 11 2018");
+		task1.setDueDate("May 21 2018");
+		task1.setImage(horizontalAlignCenter);
+		
+		Email email1 = new Email();
+		email1.setUrl("jsmith@yahoo.com");
+		
+		Role role1 = new Role();
+		role1.setDescription("FULL STACK DEVELOPER");
+		
+		User user1 = new User();
+		user1.setFirstName("JOHN");
+		user1.setLastName("SMITH");
+		user1.setEmail(email1);
+		user1.setRole(role1);
+		user1.setTask(task1);
+		user1.setImage(softwarePen);
+		
+		users.add(user1);
+		
+		// CREATING USERS 
+		Task task2 = new Task();
+		task2.setTitle("JAVA");
+		task2.setDetail("Connect the website to the database, which will be used to persist data of models and users");
+		task2.setCreatedDate("April 11 2018");
+		task2.setDueDate("April 21 2018");
+		task2.setImage(layer2);
+		
+		Email email2 = new Email();
+		email2.setUrl("schristy@gmail.com");
+		
+		User user2 = new User();
+		user2.setFirstName("Christy");
+		user2.setLastName("Su");
+		user2.setEmail(email2);
+		user2.setRole(role);
+		user2.setTask(task);
+		user2.setImage(softwarePen);
+		
+		users.add(user2);
+		
+
+		
+
 		
 		return users;
 	}
