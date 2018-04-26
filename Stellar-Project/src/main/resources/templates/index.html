@@ -1,10 +1,605 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Stellar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="/css/icon-fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
 </head>
 <body>
 
+    <header class="header">
+
+            <div class="logo">
+                <div class="logo__text">Stellar</div>
+            </div>
+
+            <div class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#section-user" class="nav__link">Users</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#task-list" class="nav__link">Tasks</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Sign up</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Log in</a>
+                        </li>
+                    </ul>
+            </div>
+
+            <div class="header__text-box">
+                <h1 class="heading__primary">
+                    <span class="heading__primary-main margin-bottom-small">Stellar</span>
+                    <span class="heading__primary-sub">workflow is orchestrated</span>
+                </h1>
+            </div>
+    </header>
+
+    <section class="section-task">
+        <div class="heading__secondary text-center margin-bottom-small" id="task-list">List of Tasks</div>
+
+        <div class="task-list row" >
+
+            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">1</div>
+                    <i class="task-list__item-icon icon-software-font-underline"></i>
+                    <h1 class="task-list__title">HTML/CSS</h1>
+                    <p class="task-list__description">Create Front page of Website, deciding on User interfaces such as color theme and layout</p>
+                    <p class="task-list__due-date">Due Date: <span>2/21/2018</span></p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">2</div>
+                    <i class="task-list__item-icon icon-software-horizontal-align-center"></i>
+                    <h1 class="task-list__title">BackBoneJs</h1>
+                    <p class="task-list__description">Using the models, create a view using the template and then inject the views with attributes of the models.</p>
+                    <p class="task-list__due-date">Due Date: <span>2/30/2018</span></p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">3</div>
+                    <i class="task-list__item-icon icon-software-layers2"></i>
+                    <h1 class="task-list__title">Java</h1>
+                    <p class="task-list__description">Connect the website to the database, which will be used to persist data of models and users</p>
+                    <p class="task-list__due-date">Due Date: <span>2/29/2018</span></p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+            <div class="task-list__item">
+                <div class="task-list__item-num">4</div>
+                <i class="task-list__item-icon icon-software-horizontal-align-left"></i>
+                <h1 class="task-list__title ">JavaScript</h1>
+                <p class="task-list__description">Create,Read,Update,Delete users and tasks.</p>
+                <p class="task-list__due-date">Due Date: <span>2/22/2018</span></p>
+                <div class="button">
+                    <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                    <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">5</div>
+                    <i class="task-list__item-icon icon-software-indent-left"></i>
+                    <h1 class="task-list__title ">NodeJS</h1>
+                    <p class="task-list__description">responsible for writing server-side web application logic in JavaScript and/or variants of it, such as CoffeeScript, IcedCoffeeScript, </p>
+                    <p class="task-list__due-date">Due Date: <span>2/22/2018</span></p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">6</div>
+                    <i class="task-list__item-icon icon-software-vertical-align-bottom"></i>
+                    <h1 class="task-list__title ">MongoDB</h1>
+                    <p class="task-list__description">MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands. </p>
+                    <p class="task-list__due-date">Due Date: <span>2/22/2018</span></p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">7</div>
+                    <i class="task-list__item-icon icon-software-layout-header-4boxes"></i>
+                    <h1 class="task-list__title ">MySQL</h1>
+                    <p class="task-list__description">Create complex queries and improve your database application performance. Explore data design and more.</p>
+                    <p class="task-list__due-date">Due Date: <span>3/22/2018</span></p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 form-group">
+                <div class="task-list__item">
+                    <div class="task-list__item-num">8</div>
+                    <i class="task-list__item-icon icon-software-vertical-distribute-bottom"></i>
+                    <h1 class="task-list__title ">Jquery</h1>
+                    <p class="task-list__description">Document traversal and manipulation, event handling, animation, and Ajax</p>
+                    <p class="task-list__due-date">Due Date: <span>4/22/2018</span></p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <a href="#create-task-form"><button class="button-secondary button-secondary-light">Create Task</button></a>
+    </section>
+
+    <section class="section-user">
+        <div class="heading__tertiary text-center margin-bottom-small" id="section-user">Users and Tasks</div>
+
+        <div class="user-list row">
+
+            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                <div class="user-list__item">
+                    <i class="user-list__item-icon icon-software-pen"></i>
+                    <h1 class="user-list__name">Christopher T.</h1>
+                    <div class="user-list__user-id">ID: 1 <span class="user-list__role">Front-end Developer</span></div>
+                    <p class="user-list__task-title">TASK: Javascript</p>
+                    <p class="user-list__task-desc">Document traversal and manipulation, event handling, animation, and Ajax</p>
+                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
+                    <p class="user-list__due-date">Due Date: 4/22/2018</p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                <div class="user-list__item">
+                    <i class="user-list__item-icon icon-software-pen"></i>
+                    <h1 class="user-list__name">John Smith</h1>
+                    <div class="user-list__user-id">ID: 2 <span class="user-list__role">Full Stack Developer</span></div>
+                    <p class="user-list__task-title">TASK: MySQL</p>
+                    <p class="user-list__task-desc">tCreate complex queries and improve your database application performance. Explore data design and more.</p>
+                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
+                    <p class="user-list__due-date">Due Date: 3/22/2018</p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                <div class="user-list__item">
+                    <i class="user-list__item-icon icon-software-pen"></i>
+                    <h1 class="user-list__name">Christy Su</h1>
+                    <div class="user-list__user-id">ID: 3 <span class="user-list__role">Back-end Developer</span></div>
+                    <p class="user-list__task-title">TASK: MongoDB</p>
+                    <p class="user-list__task-desc">MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands. </p>
+                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
+                    <p class="user-list__due-date">Due Date: 2/22/2018</p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                <div class="user-list__item">
+                    <i class="user-list__item-icon icon-software-pen"></i>
+                    <h1 class="user-list__name">Samuel Ma</h1>
+                    <div class="user-list__user-id">ID: 4 <span class="user-list__role">Back-end Developer</span></div>
+                    <p class="user-list__task-title">TASK: MongoDB</p>
+                    <p class="user-list__task-desc">MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands. </p>
+                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
+                    <p class="user-list__due-date">Due Date: 2/22/2018</p>
+                    <div class="button">
+                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                <div class="user-list__item">
+                    <i class="user-list__item-icon icon-software-pen"></i>
+                    <h1 class="user-list__name">Louis J.</h1>
+                    <div class="user-list__user-id">ID: 5 <span class="user-list__role">Full-stack Developer</span></div>
+                    <p class="user-list__task-title">TASK: MongoDB</p>
+                    <p class="user-list__task-desc">MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands. </p>
+                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
+                    <p class="user-list__due-date">Due Date: 2/22/2018</p>
+                    <div class="button">
+                        <a href="#user-form"><button type="button" class="btn btn-lg btn-outline-info">Edit</button></a>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                <div class="user-list__item">
+                    <i class="user-list__item-icon icon-software-pen"></i>
+                    <h1 class="user-list__name">Lia Smith</h1>
+                    <div class="user-list__user-id">ID: 6 <span class="user-list__role">Front-end Developer</span></div>
+                    <p class="user-list__task-title">TASK: MongoDB</p>
+                    <p class="user-list__task-desc">MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands. </p>
+                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
+                    <p class="user-list__due-date">Due Date: 2/22/2018</p>
+                    <div class="button">
+                        <a href="#user-form"><button type="button" class="btn btn-lg btn-outline-info">Edit</button></a>
+                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <a href="#create-user-form"><button class="button-secondary button-secondary-light-2">Create User</button></a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__logo">Stellar</div>
+
+        <ul class="footer__list">
+            <li class="footer__list-item">
+                <a class="footer__list-item-link" href="">About Me</a>
+            </li>
+            <li class="footer__list-item">
+                <a  class="footer__list-item-link" href="">Projects</a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-item-link" href="">Contact</a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-item-link" href="">Career</a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-item-link" href="">Policy</a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-item-link" href="">Terms</a>
+            </li>
+        </ul>
+
+    </footer>
+    <footer class="footer__bottom">
+        <p class="footer__bottom__text">
+            DJ DESIGN STUDIO &copy; 2018
+        </p>
+    </footer>
+
+    <section class="allForms"></section>
+
+
+
 </body>
+    <script type="text/template" class="user-list-template">
+
+            <div class="user-list__item">
+                <i class="user-list__item-icon icon-software-pen"></i>
+                <h1 class="user-list__name"><%= fullName %></h1>
+                <div class="user-list__user-id">ID: <%= id %> <span class="user-list__role"><%= role %></span></div>
+                <p class="user-list__task-title">TASK: <%= taskTitle %></p>
+                <p class="user-list__task-desc"><%= taskDescription %></p>
+                <p class="user-list__assigned-date">Task Assigned: <%= taskAssignDate %> </p>
+                <p class="user-list__due-date">Due Date: <%= taskDueDate %> </p>
+
+                <% if(authenticate) { %>
+                <div class="button">
+                    <a href="#user-form"><button type="button" class="btn btn-lg btn-outline-info edit-user">Edit</button></a>
+                    <button type="button" class="btn btn-lg btn-outline-danger delete-user">Delete</button>
+                </div>
+                <% } %>
+            </div>
+        
+    </script>
+
+    <script type="text/template" class="task-list-template">
+
+        <div class="task-list__item">
+            <div class="task-list__item-num"><%= id %></div>
+            <i class="task-list__item-icon"></i>
+            <h1 class="task-list__title "><%= taskTitle %></h1>
+            <p class="task-list__description"><%= taskDesc %></p>
+            <p class="task-list__created-date">Created Date: <span><%= dateCreated %></span></p>
+            <p class="task-list__due-date">Due Date: <span><%= dueDate %></span></p>
+            <div class="button">
+                <a href="#task-form"><button type="button" class="btn btn-lg btn-outline-info edit-task">Edit</button></a>
+                <button type="button" class="btn btn-lg btn-outline-danger delete-task">Delete</button>
+            </div>
+        </div>
+
+</script>
+
+    <script type="text/template" class="user-form-template">
+        <div class="form-popup" id="user-form">
+            <div class="form">
+                <a href="#section-user" class="form-popup__close">&times;</a>
+                <div class="form__header">
+                    <h2 class="heading__secondary text-center margin-bottom-small">
+                        Edit User
+                    </h2>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="form__userId userId">
+                            <label for="userId" class="form__label">userId</label>
+                            <input type="text" class="form__input" placeholder="userID" id="userId" required>
+                        </div>
+
+
+                        <div class="form__group fullName">
+                            <label for="name" class="form__label">Full Name</label>
+                            <input type="text" class="form__input" placeholder="Joshua Smith" id="name" required>
+                        </div>
+
+                        <div class="form__group role">
+                            <label for="role" class="form__label">Role</label>
+                            <input type="text" class="form__input" placeholder="Software Engineer" id="role">
+                        </div>
+
+                        <div class="form__group dateAssigned">
+                            <label for="dateAssigned" class="form__label">Date Assigned</label>
+                            <input type="text" class="form__input" placeholder="Date Assigned" id="dateAssigned">
+                        </div>
+
+                        <div class="form__group dueDate">
+                            <label for="dueDate" class="form__label">Due Date</label>
+                            <input type="text" class="form__input" placeholder="Due Date" id="dueDate">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="form__group task">
+                            <label for="task" class="form__label">Task Title</label>
+                            <input type="text" class="form__input" placeholder="Frontend UI/UX" id="task">
+                        </div>
+
+                        <div class="form__textarea task-description">
+                            <textarea name="task-descrip" id="task-description" cols="50" rows="8" maxlength="500">Task Description ...</textarea>
+                            <label for="task-description"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <a href="#section-user"><button class="button-primary button-primary-light update-user">Confirm</button></a>
+                        <a href="#section-user"><button class="button-primary button-primary-dark">Cancel</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </script>
+
+    <script type="text/template" class="task-form-template">
+
+        <div class="form-popup" id="task-form">
+            <div class="form">
+                <a href="#task-list" class="form-popup__close">&times;</a>
+                <div class="form__header">
+                    <h2 class="heading__secondary text-center margin-bottom-small">
+                        Edit Task
+                    </h2>
+                </div>
+                <div class="row margin-bottom-small">
+
+
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="form__taskId taskId">
+                            <label for="taskId" class="form__label">Task Id</label>
+                            <input type="text" class="form__input" placeholder="Task Id" id="taskId">
+                        </div>
+
+                        <div class="form__group task-title">
+                            <label for="task-title" class="form__label">Task Title</label>
+                            <input type="text" class="form__input" placeholder="MongoDb" id="task-title">
+                        </div>
+
+                        <div class="form__textarea description">
+                            <textarea name="task-descrip" id="description" cols="50" rows="8" maxlength="500">Task Description ...</textarea>
+                            <label for="description"></label>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-12">
+
+
+                        <div class="form__group date-created">
+                            <label for="date-created" class="form__label">Date Created</label>
+                            <input type="text" class="form__input" placeholder="Date Assigned" id="date-created" required>
+                        </div>
+
+                        <div class="form__group due-date">
+                            <label for="due-date" class="form__label">Due Date</label>
+                            <input type="text" class="form__input" placeholder="Due Date" id="due-date" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <a href="#task-list"><button class="button-primary button-primary-light update-task">Confirm</button></a>
+                        <a href="#task-list"><button class="button-primary button-primary-dark">Cancel</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" class="create-task-form-template">
+        <div class="form-popup" id="create-task-form">
+            <div class="form">
+                <a href="#task-list" class="form-popup__close">&times;</a>
+                <div class="form__header">
+                    <h2 class="heading__secondary text-center margin-bottom-small">
+                        Create New Task
+                    </h2>
+                </div>
+                <div class="row margin-bottom-small">
+
+
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="form__taskId new-taskId">
+                            <label for="newTaskId" class="form__label">New Task ID</label>
+                            <input type="text" class="form__input" placeholder="Task Id" id="newTaskId">
+                        </div>
+
+                        <div class="form__group new-task-title">
+                            <label for="new-task-title" class="form__label">Task Title</label>
+                            <input type="text" class="form__input" placeholder="Javascript" id="new-task-title">
+                        </div>
+
+                        <div class="form__textarea new-description">
+                            <textarea name="task-descrip" id="new-description" placeholder="Task Description ..." cols="50" rows="8" maxlength="500"></textarea>
+                            <label for="new-description"></label>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-12">
+
+
+                        <div class="form__group new-date-created">
+                            <label for="new-date-created" class="form__label">Date Created</label>
+                            <input type="text" class="form__input" placeholder="March 2 2018" id="new-date-created" required>
+                        </div>
+
+                        <div class="form__group new-due-date">
+                            <label for="new-due-date" class="form__label">Due Date</label>
+                            <input type="text" class="form__input" placeholder="March 9 2018" id="new-due-date" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <a href="#task-list"><button class="button-primary button-primary-light create-task">Confirm</button></a>
+                        <a href="#task-list"><button class="button-primary button-primary-dark cancel-new-task">Cancel</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" class="create-user-form-template">
+    <div class="form-popup" id="create-user-form">
+        <div class="form">
+            <a href="#section-user" class="form-popup__close">&times;</a>
+            <div class="form__header">
+                <h2 class="heading__secondary text-center margin-bottom-small">
+                    Create New User
+                </h2>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6 col-md-12">
+
+                    <div class="form__userId new-userId">
+                        <label for="new-userId" class="form__label">New User ID</label>
+                        <input type="text" class="form__input" placeholder="userID" id="new-userId" required>
+                    </div>
+
+
+                    <div class="form__group new-fullName">
+                        <label for="new-name" class="form__label">Full Name</label>
+                        <input type="text" class="form__input" placeholder="Joshua Smith" id="new-name" required>
+                    </div>
+
+                    <div class="form__group new-role">
+                        <label for="new-role" class="form__label">Role</label>
+                        <input type="text" class="form__input" placeholder="Software Engineer" id="new-role" required>
+                    </div>
+
+                    <div class="form__group new-dateAssigned">
+                        <label for="new-dateAssigned" class="form__label">Date Assigned</label>
+                        <input type="text" class="form__input" placeholder="May 1 2018" id="new-dateAssigned" required>
+                    </div>
+
+                    <div class="form__group new-dueDate">
+                        <label for="new-dueDate" class="form__label">Due Date</label>
+                        <input type="text" class="form__input" placeholder="May 28 2018" id="new-dueDate" required>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+
+                    <div class="form__group new-task">
+                        <label for="new-task" class="form__label">Task Title</label>
+                        <input type="text" class="form__input" placeholder="Frontend UI/UX" id="new-task" required>
+                    </div>
+
+                    <div class="form__textarea new-task-description">
+                        <textarea name="task-descrip" id="new-task-description" placeholder="Task Description ..." cols="50" rows="8" maxlength="500"></textarea>
+                        <label for="new-task-description"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="#section-user"><button class="button-primary button-primary-light create-user">Confirm</button></a>
+                    <a href="#section-user"><button class="button-primary button-primary-dark cancel-create-user">Cancel</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</script>
+
+    <script src="js/lib/jquery-min.js"></script>
+    <script src="js/lib/modernizr-2.6.2.min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/backbone-min.js"></script>
+    <script src="js/script.js"></script>
+
 </html>
