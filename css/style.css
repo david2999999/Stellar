@@ -308,11 +308,13 @@ textarea {
 .logo {
   position: absolute;
   top: 3rem;
-  left: 3rem; }
+  left: 5rem; }
   .logo__text {
-    font-family: 'Lobster', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
     color: #fff;
-    font-size: 4rem; }
+    font-size: 6rem;
+    text-shadow: 2px 2px 5px white; }
 
 .nav {
   color: white;
@@ -685,17 +687,25 @@ textarea {
   width: 100%;
   padding: 6rem 0 8rem 0; }
   .footer__logo {
-    font-size: 8rem;
-    font-family: Lobster, cursive;
+    font-size: 10rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
     display: block;
     margin: 0 auto;
     text-align: center;
-    padding: 2rem 0 4rem 0;
-    color: white; }
+    padding: 2rem 0 3rem 0;
+    color: white;
+    text-shadow: 2px 2px 7px white; }
   .footer__list {
-    list-style: none; }
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto; }
     .footer__list-item {
-      display: inline-block; }
+      display: inline-block;
+      text-align: center; }
       .footer__list-item-link:link, .footer__list-item-link:visited {
         color: #fff;
         text-decoration: none;
@@ -705,7 +715,7 @@ textarea {
         letter-spacing: .2rem;
         transition: all .4s; }
       .footer__list-item:not(:last-child) {
-        margin-right: 5rem; }
+        margin-right: 3rem; }
       .footer__list-item:hover .footer__list-item-link {
         transform: scale(1.4) rotate(-10deg);
         background-image: linear-gradient(to right, #00dbde, #FF1CAE);

@@ -1,11 +1,13 @@
 .logo{
   position: absolute;
   top: 3rem;
-  left: 3rem;
+  left: 5rem;
 
   &__text{
-    font-family: 'Lobster', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
     color: $color-white;
-    font-size: 4rem;
+    font-size: 6rem;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
   }
 }
