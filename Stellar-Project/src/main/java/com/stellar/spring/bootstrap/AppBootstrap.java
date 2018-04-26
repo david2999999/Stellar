@@ -175,7 +175,72 @@ public class AppBootstrap implements ApplicationListener<ContextRefreshedEvent>{
 		
 		users.add(user2);
 		
-
+		// creating user 
+		Task task3 = new Task();
+		task3.setTitle("JAVASCRIPT");
+		task3.setDetail("Create, Read, Update, Delete users and tasks");
+		task3.setCreatedDate("August 26 2018");
+		task3.setDueDate("September 30 2018");
+		task3.setImage(horizontalAlignLeft);
+		
+		Role role2 = new Role();
+		role2.setDescription("BACK-END DEVELOPER");
+		
+		Email email3 = new Email();
+		email3.setUrl("msamual@google.com");
+		
+		User user3 = new User();
+		user3.setFirstName("Samuel");
+		user3.setLastName("Ma");
+		user3.setEmail(email3);
+		user3.setRole(role2);
+		user3.setTask(task3);
+		user3.setImage(softwarePen);
+		
+		users.add(user3);
+		
+		// creating user
+		Task task4 = new Task();
+		task4.setTitle("NODEJS");
+		task4.setDetail("Responsible for writing server-side web application logic in JavaScript and/or variants of it, such as CoffeeScript, IcedCoffeeScript.");
+		task4.setCreatedDate("May 26 2018");
+		task4.setDueDate("June 30 2018");
+		task4.setImage(indentLeft);
+		
+		Email email4 = new Email();
+		email4.setUrl("jlouis@google.com");
+		
+		User user4 = new User();
+		user4.setFirstName("Louis");
+		user4.setLastName("Jeffer");
+		user4.setEmail(email4);
+		user4.setRole(role);
+		user4.setTask(task4);
+		user4.setImage(softwarePen);
+		
+		users.add(user4);
+		
+		
+		// creating user
+		Task task5 = new Task();
+		task5.setTitle("MONGODB");
+		task5.setDetail("MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands.");
+		task5.setCreatedDate("May 22 2018");
+		task5.setDueDate("July 30 2018");
+		task5.setImage(verticalAlignBottom);
+		
+		Email email5 = new Email();
+		email5.setUrl("slia@google.com");
+		
+		User user5 = new User();
+		user5.setFirstName("Lia");
+		user5.setLastName("Smith");
+		user5.setEmail(email5);
+		user5.setRole(role1);
+		user5.setTask(task5);
+		user5.setImage(softwarePen);
+		
+		users.add(user5);
 		
 
 		
