@@ -11,11 +11,12 @@
 
 .section-user{
 
-  padding: 10rem 0 15rem 0;
+  padding: 10rem 0 10rem 0;
   background-color: $color-grey-light-2;
   background-image:
-          linear-gradient(to top right, rgba($color-primary,.8), rgba($color-primary-dark, .8)),
+          linear-gradient(to top right, rgba($color-primary-dark,.6), rgba($color-primary, .8)),
           url("../img/office2.jpg");
+  //background-image: url("../img/office2.jpg");
   background-size: cover;
 
   @include respond(tab-port) {

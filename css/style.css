@@ -184,7 +184,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
-  background-image: linear-gradient(to right, #00dbde, #fc00ff);
+  background-image: linear-gradient(to right, #00dbde, #FF1CAE);
   -webkit-background-clip: text;
   color: transparent; }
   @media only screen and (max-width: 75em) {
@@ -269,7 +269,7 @@ body {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
       border-bottom: 3px solid #00dbde; }
     .form__input:focus:invalid {
-      border-bottom: 3px solid #fc00ff; }
+      border-bottom: 3px solid #FF1CAE; }
   .form__textarea {
     font-size: 2.2rem;
     font-family: inherit;
@@ -359,14 +359,14 @@ textarea {
     margin: .2rem;
     border-radius: 3px;
     text-align: center;
-    width: 100%;
     transition: all .3s;
-    position: relative; }
+    position: relative;
+    width: 100%; }
     .task-list__item-icon {
       font-size: 6rem;
       padding: 4.8rem 0 1.2rem 0;
       display: inline-block;
-      background-image: linear-gradient(to top right, #00dbde, #fc00ff);
+      background-image: linear-gradient(to top right, #00dbde, #FF1CAE);
       -webkit-background-clip: text;
       color: transparent; }
       @media only screen and (max-width: 75em) {
@@ -377,7 +377,7 @@ textarea {
         .task-list__item-icon {
           font-size: 5rem; } }
     .task-list__item:hover {
-      transform: translateY(-2rem) scale(1.1);
+      transform: translateY(-1rem) scale(1.05);
       background-color: white; }
     .task-list__item-num {
       font-size: 3rem;
@@ -393,18 +393,18 @@ textarea {
         .task-list__item-num {
           font-size: 2.9rem; } }
   .task-list__title {
-    font-size: 1.9rem;
+    font-size: 2rem;
     text-transform: uppercase; }
     @media only screen and (max-width: 62.5em) {
       .task-list__title {
         font-size: 2.1rem; } }
   .task-list__description {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     padding: 1rem; }
   .task-list__created-date {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: bold;
-    color: #00dbde; }
+    color: #0099CC; }
     @media only screen and (max-width: 75em) {
       .task-list__created-date {
         font-size: 1.4rem; } }
@@ -412,7 +412,7 @@ textarea {
       .task-list__created-date {
         font-size: 1.6rem; } }
   .task-list__due-date {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: bold;
     padding-bottom: 3rem;
     color: #EB3349; }
@@ -429,7 +429,7 @@ textarea {
   position: relative;
   backface-visibility: hidden; }
   .user-list__item {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: white;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     height: auto;
     margin: .2rem;
@@ -451,7 +451,7 @@ textarea {
       font-size: 6rem;
       display: inline-block;
       padding: 1rem;
-      background-image: linear-gradient(to right, #00dbde, #fc00ff);
+      background-image: linear-gradient(to right, #00dbde, #FF1CAE);
       -webkit-background-clip: text;
       color: transparent;
       position: absolute;
@@ -475,7 +475,7 @@ textarea {
     font-size: 2.2em;
     padding-top: 1.3rem;
     text-transform: uppercase;
-    background-image: linear-gradient(to right, #00dbde, #fc00ff);
+    background-image: linear-gradient(to right, #00dbde, #FF1CAE);
     -webkit-background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 75em) {
@@ -501,11 +501,12 @@ textarea {
       .user-list__assigned-date, .user-list__task-title, .user-list__due-date {
         font-size: 1.5rem; } }
   .user-list__assigned-date {
-    color: #00dbde; }
+    color: #0099CC; }
   .user-list__due-date {
     color: #EB3349; }
   .user-list__task-desc {
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    padding-bottom: 1.5rem; }
 
 .form {
   width: 75%;
@@ -537,7 +538,7 @@ textarea {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
       border-bottom: 3px solid #00dbde; }
     .form__input:focus:invalid {
-      border-bottom: 3px solid #fc00ff; }
+      border-bottom: 3px solid #FF1CAE; }
   .form__textarea {
     font-size: 2.2rem;
     font-family: inherit;
@@ -619,7 +620,7 @@ textarea {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 .button-secondary {
-  padding: 2rem 10rem;
+  padding: 1.7rem 10rem;
   font-size: 3rem;
   color: white;
   border-radius: 30rem;
@@ -643,7 +644,7 @@ textarea {
       margin: 2.6rem auto;
       box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.4); } }
   .button-secondary:hover {
-    transform: translateY(-3px) scale(1.1);
+    transform: translateY(-2px) scale(1.05);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
     cursor: pointer;
     text-decoration: none; }
@@ -707,14 +708,14 @@ textarea {
         margin-right: 5rem; }
       .footer__list-item:hover .footer__list-item-link {
         transform: scale(1.4) rotate(-10deg);
-        background-image: linear-gradient(to right, #00dbde, #fc00ff);
+        background-image: linear-gradient(to right, #00dbde, #FF1CAE);
         -webkit-background-clip: text;
         color: transparent; }
 
 .header {
   height: 100vh;
   position: relative;
-  background-image: linear-gradient(to top right, rgba(0, 219, 222, 0.8), rgba(252, 0, 255, 0.8)), url("../img/office.jpg");
+  background-image: linear-gradient(to top right, rgba(0, 219, 222, 0.8), rgba(255, 28, 174, 0.7)), url("../img/office.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
@@ -757,7 +758,7 @@ textarea {
     text-decoration: none;
     transition: all .2s; }
   .form-popup__close:hover {
-    color: #fc00ff;
+    color: #FF1CAE;
     transform: scale(1.2); }
 
 .section-task {
@@ -770,9 +771,9 @@ textarea {
       padding: 80rem 5rem 12rem 5rem; } }
 
 .section-user {
-  padding: 10rem 0 15rem 0;
+  padding: 10rem 0 10rem 0;
   background-color: #eeeeee;
-  background-image: linear-gradient(to top right, rgba(0, 219, 222, 0.8), rgba(252, 0, 255, 0.8)), url("../img/office2.jpg");
+  background-image: linear-gradient(to top right, rgba(255, 28, 174, 0.6), rgba(0, 219, 222, 0.8)), url("../img/office2.jpg");
   background-size: cover; }
   @media only screen and (max-width: 62.5em) {
     .section-user {
