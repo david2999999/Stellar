@@ -1,12 +1,13 @@
 .footer{
-  background: #C04848;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #5C258D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right bottom, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right bottom, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
   font-size: 2rem;
   font-weight: 500;
   width:100%;
-  padding: 6rem 0 8rem 0;
+  padding: 3rem 0 6rem 0;
 
 
   &__logo{
@@ -52,14 +53,27 @@
       }
 
       &:hover &-link{
-        transform: scale(1.4) rotate(-10deg);
-        background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
-        -webkit-background-clip: text;
-        color: transparent;
+        transform: scale(1.2) rotate(-5deg);
+        //background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+        //-webkit-background-clip: text;
+        color: white;
       }
 
     }
   }
 
+  &__bottom{
+    background-color: midnightblue;
+    text-align: center;
+    padding: 1rem;
+
+    &__text{
+      color: white;
+      font-size: 2rem;
+      font-family: 'lobster', cursive;
+      letter-spacing: 2px;
+      padding: 1rem 0 0 0;
+    }
+  }
 
 }

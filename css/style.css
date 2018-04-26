@@ -676,16 +676,16 @@ textarea {
   top: 1rem; }
 
 .footer {
-  background: #C04848;
+  background: #5C258D;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom right, #480048, #C04848);
+  background: -webkit-linear-gradient(to right bottom, #4389A2, #5C258D);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom right, #480048, #C04848);
+  background: linear-gradient(to right bottom, #4389A2, #5C258D);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-size: 2rem;
   font-weight: 500;
   width: 100%;
-  padding: 6rem 0 8rem 0; }
+  padding: 3rem 0 6rem 0; }
   .footer__logo {
     font-size: 10rem;
     font-family: 'Dancing Script', cursive;
@@ -717,10 +717,18 @@ textarea {
       .footer__list-item:not(:last-child) {
         margin-right: 3rem; }
       .footer__list-item:hover .footer__list-item-link {
-        transform: scale(1.4) rotate(-10deg);
-        background-image: linear-gradient(to right, #00dbde, #FF1CAE);
-        -webkit-background-clip: text;
-        color: transparent; }
+        transform: scale(1.2) rotate(-5deg);
+        color: white; }
+  .footer__bottom {
+    background-color: midnightblue;
+    text-align: center;
+    padding: 1rem; }
+    .footer__bottom__text {
+      color: white;
+      font-size: 2rem;
+      font-family: 'lobster', cursive;
+      letter-spacing: 2px;
+      padding: 1rem 0 0 0; }
 
 .header {
   height: 100vh;
