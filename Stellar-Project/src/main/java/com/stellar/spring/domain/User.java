@@ -28,4 +28,5 @@ public class User {
 	@OneToOne(cascade=CascadeType.PERSIST)
 	private Image image;
 	
+	private String taskAssigned;
 }

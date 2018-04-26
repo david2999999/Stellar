@@ -23,6 +23,7 @@ public class TaskServiceImpl implements TaskService {
 		Set<Task> tasks = new HashSet<>();
 		
 		taskRepository.findAll().iterator().forEachRemaining(tasks::add);
+		
 		return tasks;
 	}
 

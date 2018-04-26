@@ -78,100 +78,22 @@
 
         <div class="user-list row">
 
-            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                <div class="user-list__item">
-                    <i class="user-list__item-icon icon-software-pen"></i>
-                    <h1 class="user-list__name">Christopher T.</h1>
-                    <div class="user-list__user-id">ID: 1 <span class="user-list__role">Front-end Developer</span></div>
-                    <p class="user-list__task-title">TASK: Javascript</p>
-                    <p class="user-list__task-desc">Document traversal and manipulation, event handling, animation, and Ajax</p>
-                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
-                    <p class="user-list__due-date">Due Date: 4/22/2018</p>
-                    <div class="button">
-                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
-                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
-                    </div>
-                </div>
-            </div>
+            <div th:each="user : ${users}" class="col-lg-4 col-md-6 col-sm-12 form-group">
+	            <div class="user-list__item">
+	                <i class="user-list__item-icon icon-software-pen"></i>
+	                <h1 class="user-list__name" th:text="${user.firstName} + ' ' + ${user.lastName}"></h1>
+	                <div class="user-list__user-id">ID: <span th:text="${user.id}"></span> <span class="user-list__role" th:text="${user.role.getDescription()}"></span></div>
+	                <p class="user-list__task-title">TASK: <span th:text="${user.task.getTitle()}"></span></p>
+	                <p class="user-list__task-desc" th:text="${user.task.getDetail()}"></p>
+	                <p class="user-list__assigned-date">Task Assigned: <span th:text="${user.taskAssigned}"></span> </p>
+	                <p class="user-list__due-date">Due Date: <span th:text="${user.task.getDueDate()}"></span> </p>
 
-            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                <div class="user-list__item">
-                    <i class="user-list__item-icon icon-software-pen"></i>
-                    <h1 class="user-list__name">John Smith</h1>
-                    <div class="user-list__user-id">ID: 2 <span class="user-list__role">Full Stack Developer</span></div>
-                    <p class="user-list__task-title">TASK: MySQL</p>
-                    <p class="user-list__task-desc">tCreate complex queries and improve your database application performance. Explore data design and more.</p>
-                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
-                    <p class="user-list__due-date">Due Date: 3/22/2018</p>
-                    <div class="button">
-                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
-                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
-                    </div>
-                </div>
-            </div>
+	                <div class="button">
+	                    <a href="#user-form"><button type="button" class="btn btn-lg btn-outline-info edit-user">Edit</button></a>
+	                    <button type="button" class="btn btn-lg btn-outline-danger delete-user">Delete</button>
+	                </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                <div class="user-list__item">
-                    <i class="user-list__item-icon icon-software-pen"></i>
-                    <h1 class="user-list__name">Christy Su</h1>
-                    <div class="user-list__user-id">ID: 3 <span class="user-list__role">Back-end Developer</span></div>
-                    <p class="user-list__task-title">TASK: MongoDB</p>
-                    <p class="user-list__task-desc">MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands. </p>
-                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
-                    <p class="user-list__due-date">Due Date: 2/22/2018</p>
-                    <div class="button">
-                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
-                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                <div class="user-list__item">
-                    <i class="user-list__item-icon icon-software-pen"></i>
-                    <h1 class="user-list__name">Samuel Ma</h1>
-                    <div class="user-list__user-id">ID: 4 <span class="user-list__role">Back-end Developer</span></div>
-                    <p class="user-list__task-title">TASK: MongoDB</p>
-                    <p class="user-list__task-desc">MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands. </p>
-                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
-                    <p class="user-list__due-date">Due Date: 2/22/2018</p>
-                    <div class="button">
-                        <button type="button" class="btn btn-lg btn-outline-info">Edit</button>
-                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                <div class="user-list__item">
-                    <i class="user-list__item-icon icon-software-pen"></i>
-                    <h1 class="user-list__name">Louis J.</h1>
-                    <div class="user-list__user-id">ID: 5 <span class="user-list__role">Full-stack Developer</span></div>
-                    <p class="user-list__task-title">TASK: MongoDB</p>
-                    <p class="user-list__task-desc">MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands. </p>
-                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
-                    <p class="user-list__due-date">Due Date: 2/22/2018</p>
-                    <div class="button">
-                        <a href="#user-form"><button type="button" class="btn btn-lg btn-outline-info">Edit</button></a>
-                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                <div class="user-list__item">
-                    <i class="user-list__item-icon icon-software-pen"></i>
-                    <h1 class="user-list__name">Lia Smith</h1>
-                    <div class="user-list__user-id">ID: 6 <span class="user-list__role">Front-end Developer</span></div>
-                    <p class="user-list__task-title">TASK: MongoDB</p>
-                    <p class="user-list__task-desc">MongoDB developers who use the program regularly should have an idea of how to do specific commands. There are some of more common ones that they should be able to talk about, including collection commands. </p>
-                    <p class="user-list__assigned-date">Task Assigned: 2/3/2018</p>
-                    <p class="user-list__due-date">Due Date: 2/22/2018</p>
-                    <div class="button">
-                        <a href="#user-form"><button type="button" class="btn btn-lg btn-outline-info">Edit</button></a>
-                        <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
-                    </div>
-                </div>
+	            </div>
             </div>
 
 
@@ -216,43 +138,6 @@
 
 
 </body>
-    <script type="text/template" class="user-list-template">
-
-            <div class="user-list__item">
-                <i class="user-list__item-icon icon-software-pen"></i>
-                <h1 class="user-list__name"><%= fullName %></h1>
-                <div class="user-list__user-id">ID: <%= id %> <span class="user-list__role"><%= role %></span></div>
-                <p class="user-list__task-title">TASK: <%= taskTitle %></p>
-                <p class="user-list__task-desc"><%= taskDescription %></p>
-                <p class="user-list__assigned-date">Task Assigned: <%= taskAssignDate %> </p>
-                <p class="user-list__due-date">Due Date: <%= taskDueDate %> </p>
-
-                <% if(authenticate) { %>
-                <div class="button">
-                    <a href="#user-form"><button type="button" class="btn btn-lg btn-outline-info edit-user">Edit</button></a>
-                    <button type="button" class="btn btn-lg btn-outline-danger delete-user">Delete</button>
-                </div>
-                <% } %>
-            </div>
-        
-    </script>
-
-    <script type="text/template" class="task-list-template">
-
-        <div class="task-list__item">
-            <div class="task-list__item-num"><%= id %></div>
-            <i class="task-list__item-icon"></i>
-            <h1 class="task-list__title "><%= taskTitle %></h1>
-            <p class="task-list__description"><%= taskDesc %></p>
-            <p class="task-list__created-date">Created Date: <span><%= dateCreated %></span></p>
-            <p class="task-list__due-date">Due Date: <span><%= dueDate %></span></p>
-            <div class="button">
-                <a href="#task-form"><button type="button" class="btn btn-lg btn-outline-info edit-task">Edit</button></a>
-                <button type="button" class="btn btn-lg btn-outline-danger delete-task">Delete</button>
-            </div>
-        </div>
-
-</script>
 
     <script type="text/template" class="user-form-template">
         <div class="form-popup" id="user-form">

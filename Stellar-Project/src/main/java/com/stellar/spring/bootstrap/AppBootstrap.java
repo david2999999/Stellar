@@ -127,6 +127,7 @@ public class AppBootstrap implements ApplicationListener<ContextRefreshedEvent>{
 		user.setRole(role);
 		user.setTask(task);
 		user.setImage(softwarePen);
+		user.setTaskAssigned("February 10 2018");
 		
 		users.add(user);
 		
@@ -151,6 +152,7 @@ public class AppBootstrap implements ApplicationListener<ContextRefreshedEvent>{
 		user1.setRole(role1);
 		user1.setTask(task1);
 		user1.setImage(softwarePen);
+		user1.setTaskAssigned("April 22 2018");
 		
 		users.add(user1);
 		
@@ -172,6 +174,7 @@ public class AppBootstrap implements ApplicationListener<ContextRefreshedEvent>{
 		user2.setRole(role);
 		user2.setTask(task);
 		user2.setImage(softwarePen);
+		user2.setTaskAssigned("April 18 2018");
 		
 		users.add(user2);
 		
@@ -196,6 +199,7 @@ public class AppBootstrap implements ApplicationListener<ContextRefreshedEvent>{
 		user3.setRole(role2);
 		user3.setTask(task3);
 		user3.setImage(softwarePen);
+		user3.setTaskAssigned("September 1 2018");
 		
 		users.add(user3);
 		
@@ -217,6 +221,7 @@ public class AppBootstrap implements ApplicationListener<ContextRefreshedEvent>{
 		user4.setRole(role);
 		user4.setTask(task4);
 		user4.setImage(softwarePen);
+		user4.setTaskAssigned("June 21 2018");
 		
 		users.add(user4);
 		
@@ -239,6 +244,7 @@ public class AppBootstrap implements ApplicationListener<ContextRefreshedEvent>{
 		user5.setRole(role1);
 		user5.setTask(task5);
 		user5.setImage(softwarePen);
+		user5.setTaskAssigned("July 20 2018");
 		
 		users.add(user5);
 		
