@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">	
+<head>
+    <meta charset="UTF-8">
+    <title>New User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="/css/icon-fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+</head>
+<body>
+	<div class="form-popup" id="create-user-form">
+        <div class="form">
+            <div class="form__header">
+                <h2 class="heading__secondary text-center margin-bottom-small">
+                    Create New User
+                </h2>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6 col-md-12">
+
+                    <div class="form__userId new-userId">
+                        <label for="new-userId" class="form__label">New User ID</label>
+                        <input type="text" class="form__input" placeholder="userID" id="new-userId" required>
+                    </div>
+
+
+                    <div class="form__group new-fullName">
+                        <label for="new-name" class="form__label">Full Name</label>
+                        <input type="text" class="form__input" placeholder="Joshua Smith" id="new-name" required>
+                    </div>
+
+                    <div class="form__group new-role">
+                        <label for="new-role" class="form__label">Role</label>
+                        <input type="text" class="form__input" placeholder="Software Engineer" id="new-role" required>
+                    </div>
+
+                    <div class="form__group new-dateAssigned">
+                        <label for="new-dateAssigned" class="form__label">Date Assigned</label>
+                        <input type="text" class="form__input" placeholder="May 1 2018" id="new-dateAssigned" required>
+                    </div>
+
+                    <div class="form__group new-dueDate">
+                        <label for="new-dueDate" class="form__label">Due Date</label>
+                        <input type="text" class="form__input" placeholder="May 28 2018" id="new-dueDate" required>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+
+                    <div class="form__group new-task">
+                        <label for="new-task" class="form__label">Task Title</label>
+                        <input type="text" class="form__input" placeholder="Frontend UI/UX" id="new-task" required>
+                    </div>
+
+                    <div class="form__textarea new-task-description">
+                        <textarea name="task-descrip" id="new-task-description" placeholder="Task Description ..." cols="50" rows="8" maxlength="500"></textarea>
+                        <label for="new-task-description"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="#section-user"><button class="button-primary button-primary-light create-user">Confirm</button></a>
+                    <a href="#section-user"><button class="button-primary button-primary-dark cancel-create-user">Cancel</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+</body>
+</html>
