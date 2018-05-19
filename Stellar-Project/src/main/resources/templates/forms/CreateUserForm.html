@@ -51,25 +51,30 @@
                         th:field="*{taskAssigned}" id="new-dateAssigned" required>
                     </div>
                 </div>
-
+<!-- 
                 <div class="col-lg-6 col-md-12">
                     <div class="form__group new-task">
                         <label for="new-task" class="form__label">Task Title</label> <br>
                         <div class="form__select">
-                            <select name="new-task" id="new-task" >
+                            <select name="new-task" id="new-task" th:field="*{task}">
+
+                                <option class="form__option"
+                                	th:each="task: ${tasks}"
+                                	th:value="${task.getTitle()}"
+                                	th:text="${task.getTitle()}"
+                                ></option>
                                 <option value="" selected disabled hidden>Select a Task</option>
-                                <option class="form__option" value="volvo">Volvo</option>
                             </select>
                         </div>
 
-                        <!--<input type="text" class="form__input" placeholder="Frontend UI/UX" id="new-task" required>-->
+                        <input type="text" class="form__input" placeholder="Frontend UI/UX" id="new-task" required>
                     </div>
 
                     <div class="form__task-desc">
                         <p class="form__task-desc__title">Task Description</p>
                         <div class="form__task-desc__text"></div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">

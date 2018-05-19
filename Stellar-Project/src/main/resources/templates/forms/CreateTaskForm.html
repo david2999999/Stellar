@@ -15,7 +15,7 @@
 </head>
 <body>
 	        <div class="form-popup" id="create-task-form">
-            <div class="form">
+            <form class="form" th:object="${task}" th:action="@{/create-task/}" method="post">
                 <div class="form__header">
                     <h2 class="heading__secondary text-center margin-bottom-small">
                         Create New Task
@@ -26,18 +26,13 @@
 
                     <div class="col-lg-6 col-md-12">
 
-                        <div class="form__taskId new-taskId">
-                            <label for="newTaskId" class="form__label">New Task ID</label>
-                            <input type="text" class="form__input" placeholder="Task Id" id="newTaskId">
-                        </div>
-
                         <div class="form__group new-task-title">
                             <label for="new-task-title" class="form__label">Task Title</label>
-                            <input type="text" class="form__input" placeholder="Javascript" id="new-task-title">
+                            <input th:field="*{title}" type="text" class="form__input" placeholder="Javascript" id="new-task-title">
                         </div>
 
                         <div class="form__textarea new-description">
-                            <textarea name="task-descrip" id="new-description" placeholder="Task Description ..." cols="50" rows="8" maxlength="500"></textarea>
+                            <textarea th:field="*{detail}" name="task-descrip" id="new-description" placeholder="Task Description ..." cols="50" rows="8" maxlength="500"></textarea>
                             <label for="new-description"></label>
                         </div>
 
@@ -49,12 +44,12 @@
 
                         <div class="form__group new-date-created">
                             <label for="new-date-created" class="form__label">Date Created</label>
-                            <input type="text" class="form__input" placeholder="March 2 2018" id="new-date-created" required>
+                            <input th:field="*{createdDate}" type="text" class="form__input" placeholder="March 2 2018" id="new-date-created">
                         </div>
 
                         <div class="form__group new-due-date">
                             <label for="new-due-date" class="form__label">Due Date</label>
-                            <input type="text" class="form__input" placeholder="March 9 2018" id="new-due-date" required>
+                            <input th:field="*{dueDate}" type="text" class="form__input" placeholder="March 9 2018" id="new-due-date">
                         </div>
                     </div>
 
@@ -62,11 +57,11 @@
 
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <a href="#task-list"><button class="button-primary button-primary-light create-task">Confirm</button></a>
-                        <a href="#task-list"><button class="button-primary button-primary-dark cancel-new-task">Cancel</button></a>
+                        <button type="submit" class="button-primary button-primary-light create-task">Confirm</button>
+                        <a href="http://localhost:8080/" class="button-primary button-primary-dark cancel-new-task">Go Back</a>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
 	
 </body>
