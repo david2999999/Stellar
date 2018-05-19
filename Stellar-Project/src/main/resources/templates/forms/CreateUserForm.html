@@ -14,54 +14,60 @@
 
 </head>
 <body>
+
 	<div class="form-popup" id="create-user-form">
-        <div class="form">
+        <form th:object="${user}" th:action="@{/user/}" method="post" class="form">
             <div class="form__header">
                 <h2 class="heading__secondary text-center margin-bottom-small">
                     Create New User
                 </h2>
             </div>
+            <input type="hidden" th:field="*{id}"/>
             <div class="row">
 
                 <div class="col-lg-6 col-md-12">
 
-                    <div class="form__userId new-userId">
-                        <label for="new-userId" class="form__label">New User ID</label>
-                        <input type="text" class="form__input" placeholder="userID" id="new-userId" required>
+                    <div class="form__group">
+                        <label for="new-name" class="form__label">First Name</label>
+                        <input type="text" class="form__input" placeholder="Joshua Smith" 
+                        th:field="*{firstName}" id="new-name" required>
                     </div>
 
-
-                    <div class="form__group new-fullName">
-                        <label for="new-name" class="form__label">Full Name</label>
-                        <input type="text" class="form__input" placeholder="Joshua Smith" id="new-name" required>
+                    <div class="form__group">
+                        <label for="new-name" class="form__label">Last Name</label>
+                        <input type="text" class="form__input" placeholder="Joshua Smith" 
+                        th:field="*{lastName}" id="new-name" required>
                     </div>
-
+                    
                     <div class="form__group new-role">
                         <label for="new-role" class="form__label">Role</label>
-                        <input type="text" class="form__input" placeholder="Software Engineer" id="new-role" required>
+                        <input type="text" class="form__input" placeholder="Software Engineer" 
+                        th:field="*{role}" id="new-role" required>
                     </div>
 
                     <div class="form__group new-dateAssigned">
                         <label for="new-dateAssigned" class="form__label">Date Assigned</label>
-                        <input type="text" class="form__input" placeholder="May 1 2018" id="new-dateAssigned" required>
-                    </div>
-
-                    <div class="form__group new-dueDate">
-                        <label for="new-dueDate" class="form__label">Due Date</label>
-                        <input type="text" class="form__input" placeholder="May 28 2018" id="new-dueDate" required>
+                        <input type="text" class="form__input" placeholder="May 1 2018" 
+                        th:field="*{taskAssigned}" id="new-dateAssigned" required>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-12">
-
                     <div class="form__group new-task">
-                        <label for="new-task" class="form__label">Task Title</label>
-                        <input type="text" class="form__input" placeholder="Frontend UI/UX" id="new-task" required>
+                        <label for="new-task" class="form__label">Task Title</label> <br>
+                        <div class="form__select">
+                            <select name="new-task" id="new-task" >
+                                <option value="" selected disabled hidden>Select a Task</option>
+                                <option class="form__option" value="volvo">Volvo</option>
+                            </select>
+                        </div>
+
+                        <!--<input type="text" class="form__input" placeholder="Frontend UI/UX" id="new-task" required>-->
                     </div>
 
-                    <div class="form__textarea new-task-description">
-                        <textarea name="task-descrip" id="new-task-description" placeholder="Task Description ..." cols="50" rows="8" maxlength="500"></textarea>
-                        <label for="new-task-description"></label>
+                    <div class="form__task-desc">
+                        <p class="form__task-desc__title">Task Description</p>
+                        <div class="form__task-desc__text"></div>
                     </div>
                 </div>
             </div>
@@ -71,7 +77,7 @@
                     <a href="#section-user"><button class="button-primary button-primary-dark cancel-create-user">Cancel</button></a>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 	
 </body>

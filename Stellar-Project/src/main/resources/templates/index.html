@@ -70,7 +70,7 @@
             
         </div>
 
-        <a href="#create-task-form"><button class="button-secondary button-secondary-light">Create Task</button></a>
+        <a th:href="@{/task/new}"><button class="button-secondary button-secondary-light">Create Task</button></a>
     </section>
 
     <section class="section-user">
@@ -99,7 +99,7 @@
 
         </div>
 
-        <a href="#create-user-form"><button class="button-secondary button-secondary-light-2">Create User</button></a>
+        <a th:href="@{/user/new}"><button class="button-secondary button-secondary-light-2">Create User</button></a>
     </section>
 
     <footer class="footer">
@@ -139,14 +139,6 @@
 
 </body>
 
-
-
-    <script type="text/template" class="create-task-form-template">
-    </script>
-
-    <script type="text/template" class="create-user-form-template">
-    
-</script>
 
     <script src="js/lib/jquery-min.js"></script>
 

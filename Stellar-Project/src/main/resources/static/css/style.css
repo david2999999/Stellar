@@ -8,6 +8,7 @@
   vertical-align: baseline;
   background: transparent;
   box-sizing: inherit; }
+
 a:active, a:visited {
   text-decoration: none !important; }
 
@@ -300,6 +301,46 @@ body {
     width: 0;
     display: none;
     visibility: hidden; }
+  .form__select {
+    font-size: 2rem;
+    margin-bottom: 3rem; }
+  .form__select select {
+    width: 90%;
+    padding: 1.5rem 1.5rem 1.5rem 2.2rem;
+    background: rgba(255, 255, 255, 0.5) url("../img/caret-down.png") no-repeat 95% 50%;
+    background-size: 3rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: #777;
+    text-align-last: center; }
+  .form__select select:hover {
+    cursor: pointer; }
+  .form__select select:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #00dbde;
+    background-color: white; }
+  .form__option {
+    display: block;
+    height: 2rem; }
+  .form__task-desc {
+    background-color: #fff;
+    width: 90%;
+    height: 28rem;
+    color: #777;
+    border-radius: 2px;
+    position: relative; }
+    .form__task-desc__title {
+      font-size: 1.6rem;
+      font-family: inherit;
+      color: #777;
+      padding-left: 1rem;
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem; }
+    .form__task-desc__text {
+      font-size: 2rem;
+      padding: 1rem; }
 
 textarea {
   color: inherit; }
@@ -571,6 +612,46 @@ textarea {
     width: 0;
     display: none;
     visibility: hidden; }
+  .form__select {
+    font-size: 2rem;
+    margin-bottom: 3rem; }
+  .form__select select {
+    width: 90%;
+    padding: 1.5rem 1.5rem 1.5rem 2.2rem;
+    background: rgba(255, 255, 255, 0.5) url("../img/caret-down.png") no-repeat 95% 50%;
+    background-size: 3rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: #777;
+    text-align-last: center; }
+  .form__select select:hover {
+    cursor: pointer; }
+  .form__select select:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #00dbde;
+    background-color: white; }
+  .form__option {
+    display: block;
+    height: 2rem; }
+  .form__task-desc {
+    background-color: #fff;
+    width: 90%;
+    height: 28rem;
+    color: #777;
+    border-radius: 2px;
+    position: relative; }
+    .form__task-desc__title {
+      font-size: 1.6rem;
+      font-family: inherit;
+      color: #777;
+      padding-left: 1rem;
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem; }
+    .form__task-desc__text {
+      font-size: 2rem;
+      padding: 1rem; }
 
 textarea {
   color: inherit; }
@@ -750,12 +831,14 @@ textarea {
     text-align: center; }
 
 .form-popup {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: white;
   position: fixed;
   height: 100vh;
   z-index: 999;
-  transition: all .3s;
-  width: 100% }
+  opacity: 1;
+  visibility: visible;
+  width: 100%; 
+ }
 
   .form-popup__close:link, .form-popup__close:visited {
     position: absolute;
