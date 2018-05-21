@@ -12,6 +12,10 @@
 
 }
 
+div.ui-datepicker{
+  font-size:2rem;
+}
+
 [data-icon]:before {
   font-family: "linea-software-10" !important;
   content: attr(data-icon);

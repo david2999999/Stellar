@@ -7,11 +7,11 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link rel="stylesheet" href="css/icon-fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/datePicker/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-
+    <link rel="stylesheet" href="css/icon-fonts.css">
 </head>
 <body>
 
@@ -321,8 +321,9 @@
                 <div class="user-list__user-id">ID: <%= id %> <span class="user-list__role"><%= role %></span></div>
                 <p class="user-list__task-title">TASK: <%= taskTitle %></p>
                 <p class="user-list__task-desc"><%= taskDescription %></p>
-                <p class="user-list__assigned-date">Task Assigned: <%= taskAssignDate %> </p>
-                <p class="user-list__due-date">Due Date: <%= taskDueDate %> </p>
+
+                <p class="user-list__assigned-date">Task Assigned: <%= $.format.date( new Date( taskAssignDate ), 'MMMM dd yyyy' ) %> </p>
+                <p class="user-list__due-date">Due Date: <%= $.format.date( new Date( taskDueDate ), 'MMMM dd yyyy' ) %> </p>
 
                 <% if(authenticate) { %>
                 <div class="button">
@@ -341,8 +342,8 @@
             <i class="task-list__item-icon"></i>
             <h1 class="task-list__title "><%= taskTitle %></h1>
             <p class="task-list__description"><%= taskDesc %></p>
-            <p class="task-list__created-date">Created Date: <span><%= dateCreated %></span></p>
-            <p class="task-list__due-date">Due Date: <span><%= dueDate %></span></p>
+            <p class="task-list__created-date">Created Date: <span><%= $.format.date( new Date( dateCreated ), 'MMMM dd yyyy' ) %></span></p>
+            <p class="task-list__due-date">Due Date: <span><%= $.format.date( new Date( dueDate ), 'MMMM dd yyyy' ) %></span></p>
             <div class="button">
                 <a href="#task-form"><button type="button" class="btn btn-lg btn-outline-info edit-task">Edit</button></a>
                 <button type="button" class="btn btn-lg btn-outline-danger delete-task">Delete</button>
@@ -597,9 +598,12 @@
 </script>
 
     <script src="js/lib/jquery-min.js"></script>
+    <script src="css/datePicker/jquery-ui.js"></script>
+    <script src="js/lib/jquery-dateFormat.min.js"></script>
     <script src="js/lib/modernizr-2.6.2.min.js"></script>
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/backbone-min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
 
 </html>

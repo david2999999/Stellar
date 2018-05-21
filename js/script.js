@@ -210,6 +210,10 @@ var UserView = Backbone.View.extend({
 
         $('.task-description').html(' <textarea name="task-descrip" id="task-description" cols="50" rows="8" maxlength="500">' + this.model.get('taskDescription')+ '</textarea>' +
                                 '<label for="task-description"></label>');
+
+
+        $( '#dateAssigned' ).datepicker();
+        $( '#dueDate' ).datepicker();
         },
 
     delete: function () {
@@ -255,7 +259,6 @@ var UserViews = Backbone.View.extend({
 
 });
 
-
 var TaskView = Backbone.View.extend({
     model: new Task(),
     className: "col-lg-3 col-md-6 col-sm-12 form-group",
@@ -281,6 +284,9 @@ var TaskView = Backbone.View.extend({
 
         $('.due-date').html('<label for="due-date" class="form__label">Due Date</label>' +
             '<input type="text" class="form__input" value="' + this.model.get('dueDate') +'" id="due-date" required>')
+
+        $( '#date-created' ).datepicker();
+        $( '#due-date' ).datepicker();
     },
 
     delete: function () {
