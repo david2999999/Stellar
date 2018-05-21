@@ -191,7 +191,7 @@ var UserView = Backbone.View.extend({
 
     edit: function () {
         $(".userId").html('<label for="userId" class="form__label">userId</label>' +
-            '<input type="text" class="form__input" value="' + this.model.get('id') + '" id="userId" required>')
+            '<input type="text" class="form__input" value="' + this.model.get('id') + '" id="userId" required>');
 
         $(".fullName").html('<label for="name" class="form__label">Full Name</label>' +
                         ' <input type="text" class="form__input" value="' + this.model.get('fullName') + '" id="name" required>');
@@ -206,7 +206,7 @@ var UserView = Backbone.View.extend({
             '                        <input type="text" class="form__input" value="' + this.model.get('taskDueDate') +'" id="dueDate">');
 
         $('.task').html('<label for="task" class="form__label">Task Title</label>\n' +
-            '                        <input type="text" class="form__input" value="' + this.model.get('taskTitle') +'"id="task">');
+            '                        <input type="text" class="form__input" value="' + this.model.get('taskTitle') +'" id="task">');
 
         $('.task-description').html(' <textarea name="task-descrip" id="task-description" cols="50" rows="8" maxlength="500">' + this.model.get('taskDescription')+ '</textarea>' +
                                 '<label for="task-description"></label>');
@@ -283,7 +283,7 @@ var TaskView = Backbone.View.extend({
             '<input type="text" class="form__input" value="' + this.model.get('dateCreated') +'" id="date-created" required>');
 
         $('.due-date').html('<label for="due-date" class="form__label">Due Date</label>' +
-            '<input type="text" class="form__input" value="' + this.model.get('dueDate') +'" id="due-date" required>')
+            '<input type="text" class="form__input" value="' + this.model.get('dueDate') +'" id="due-date" required>');
 
         $( '#date-created' ).datepicker();
         $( '#due-date' ).datepicker();
@@ -442,7 +442,7 @@ var UserFormView = Backbone.View.extend({
 
       if(task.isValid()){
           tasks.add(task);
-          clearForm();
+          this.clearForm();
       }
 
     },
