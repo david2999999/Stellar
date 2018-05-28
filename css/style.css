@@ -340,7 +340,7 @@ textarea {
     backface-visibility: hidden;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3); }
   .nav__link:hover {
-    transform: scale(1.3); }
+    transform: scale(1.1); }
 
 .task-list {
   transition: all .3s;
@@ -598,7 +598,7 @@ textarea {
       border-radius: 28rem;
       box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.4); } }
   .button-primary:hover {
-    transform: translateY(-3px) scale(1.1);
+    transform: translateY(-3px) scale(1.05);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
     cursor: pointer; }
   .button-primary:active {
@@ -676,18 +676,13 @@ textarea {
   top: 1rem; }
 
 .footer {
-  background: #5C258D;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right bottom, #4389A2, #5C258D);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right bottom, #4389A2, #5C258D);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-size: 2rem;
+  background: #00001e;
+  font-size: 1.6rem;
   font-weight: 500;
   width: 100%;
   padding: 3rem 0 6rem 0; }
   .footer__logo {
-    font-size: 10rem;
+    font-size: 7rem;
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
     display: block;
@@ -720,12 +715,12 @@ textarea {
         transform: scale(1.2) rotate(-5deg);
         color: white; }
   .footer__bottom {
-    background-color: midnightblue;
+    background-color: black;
     text-align: center;
-    padding: 1rem; }
+    padding: .5rem; }
     .footer__bottom__text {
       color: white;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-family: 'lobster', cursive;
       letter-spacing: 2px;
       padding: 1rem 0 0 0; }
@@ -791,7 +786,7 @@ textarea {
 .section-user {
   padding: 10rem 0 10rem 0;
   background-color: #eeeeee;
-  background-image: linear-gradient(to top right, rgba(255, 28, 174, 0.6), rgba(0, 219, 222, 0.8)), url("../img/office2.jpg");
+  background-image: linear-gradient(to right, rgba(255, 28, 174, 0.3), rgba(0, 219, 222, 0.3)), url("../img/office2.jpg");
   background-size: cover; }
   @media only screen and (max-width: 62.5em) {
     .section-user {

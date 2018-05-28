@@ -1,4 +1,4 @@
-<h1>Stellar - <span><h4>Workflow is Orchestrated</h4></span></h1>
+<h1>Stellar <span><h4>Workflow is Orchestrated</h4></span></h1>
 
 <h2>Case Study</h2>
 <p>
@@ -147,6 +147,5 @@
         <li>Scale Up effect when hovered on buttons, Scale down effect when click on buttons </li>
         <li>Translate upward when user/task are hovered</li>
         <li>Clip Path or Crop on the Header Section</li>
-        <li>Currently still working on the footer</li>
     </ul>
 </p>
