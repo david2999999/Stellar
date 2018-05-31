@@ -26,6 +26,14 @@
     border-left: none;
     text-align: center;
 
+    &__quote{
+      font-size: $default-font-size;
+      padding: 5rem 3rem 2rem 3rem;
+
+      &__author{
+        font-size: $default-font-size;
+      }
+    }
     &__title{
       font-size: 2.5rem;
       margin-bottom: 2rem;
