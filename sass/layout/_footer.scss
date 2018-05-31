@@ -1,60 +1,37 @@
 .footer{
-  background: #00001e;
-  font-size: 1.6rem;
-  font-weight: 500;
-  width:100%;
-  padding: 3rem 0 6rem 0;
-
+  background:linear-gradient( rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 0.8)100%),url("../img/footer.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  color: whitesmoke;
+  font-family: 'Vidaloka', serif;
 
   &__logo{
-    font-size: 7rem;
+    font-size: 6rem;
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
     display: block;
     margin: 0 auto;
     text-align: center;
-    padding: 2rem 0 3rem 0;
     color: white;
     text-shadow: 2px 2px 7px rgba(255, 255, 255, 1);
-
+    margin-bottom: 1rem;
   }
 
-
-  &__list{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 50%;
-    margin: 0 auto;
-
-    &-item{
-      display: inline-block;
-      text-align: center;
-      &-link{
-        &:link,
-        &:visited{
-          color: $color-white;
-          text-decoration: none;
-          text-transform: uppercase;
-          display: inline-block;
-          backface-visibility: hidden;
-          letter-spacing: .2rem;
-          transition: all .4s;
-        }
-      }
-
-      &:not(:last-child){
-        margin-right: 3rem;
-      }
-
-      &:hover &-link{
-        transform: scale(1.2) rotate(-5deg);
-        color: white;
-      }
-
-    }
+  &__section{
+    flex: 1; padding: 10rem;
+    position: relative;
+    border: 1px solid $color-grey-dark;
+    border-left: none;
+    text-align: center;
   }
+
+  &__text{
+    font-size: $default-font-size;
+    padding: 0 2rem 0 2rem;
+  }
+
 
   &__bottom{
     background-color: black;
