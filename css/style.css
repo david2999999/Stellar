@@ -702,7 +702,7 @@ textarea {
     text-align: center; }
     .footer__section__quote {
       font-size: 1.6rem;
-      padding: 5rem 3rem 2rem 3rem; }
+      padding: 5rem 2rem 2rem 2rem; }
       .footer__section__quote__author {
         font-size: 1.6rem; }
     .footer__section__title {
@@ -720,6 +720,34 @@ textarea {
           transition: all .3s; }
           .footer__section__ul__li__a:hover {
             color: #00dbde; }
+    .footer__section__form {
+      padding: 1rem; }
+      .footer__section__form__input {
+        background-color: white;
+        padding: 2rem;
+        font-size: 1.6rem;
+        border-radius: 5px;
+        color: #777;
+        margin-bottom: 1.5rem; }
+      .footer__section__form__button {
+        padding: 2rem 3rem 2rem 3rem;
+        color: inherit;
+        font-size: 1.6rem;
+        background: #1D976C;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #93F9B9, #1D976C);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border-radius: 5px; }
+        .footer__section__form__button:hover {
+          background: #2193b0;
+          /* fallback for old browsers */
+          background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0);
+          /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to bottom, #6dd5ed, #2193b0);
+          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          cursor: pointer; }
   .footer__text {
     font-size: 1.6rem;
     padding: 0 2rem 0 2rem; }
