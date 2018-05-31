@@ -700,6 +700,21 @@ textarea {
     border: 1px solid #777;
     border-left: none;
     text-align: center; }
+    .footer__section__title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem; }
+    .footer__section__ul {
+      font-size: 1.6rem;
+      list-style: none;
+      padding: 0 2rem 0 2rem; }
+      .footer__section__ul__li {
+        padding: .5rem; }
+        .footer__section__ul__li__a {
+          text-decoration: none;
+          color: inherit;
+          transition: all .3s; }
+          .footer__section__ul__li__a:hover {
+            color: #00dbde; }
   .footer__text {
     font-size: 1.6rem;
     padding: 0 2rem 0 2rem; }
