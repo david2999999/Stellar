@@ -1,11 +1,11 @@
 .button-secondary{
-  padding: 1.7rem 10rem;
-  font-size: 3rem;
+  padding: 1.4rem 10rem;
+  font-size: 2.3rem;
   color: white;
-  border-radius: 30rem;
+  border-radius: .5rem;
   margin: 3rem auto;
   display: block;
-  box-shadow: 0 1rem 2rem rgba($color-black, .4);
+  box-shadow: 0 .5rem 1rem rgba($color-black, .4);
   transition: all .3s;
   backface-visibility: hidden;
 
@@ -14,7 +14,7 @@
     font-size: 2.8rem;
     border-radius: 28rem;
     margin: 2.8rem auto;
-    box-shadow: 0 .8rem 1.8rem rgba($color-black, .4);
+    box-shadow: 0 .4rem 1.4rem rgba($color-black, .4);
   }
 
   @include respond(tab-port) {
@@ -22,18 +22,18 @@
     font-size: 2.6rem;
     border-radius: 26rem;
     margin: 2.6rem auto;
-    box-shadow: 0 .6rem 1.6rem rgba($color-black, .4);
+    box-shadow: 0 .2rem 1.2rem rgba($color-black, .4);
   }
 
   &:hover{
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 2rem 4rem rgba($color-black, .4);
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 2rem rgba($color-black, .4);
     cursor: pointer;
     text-decoration: none;
   }
 
   &:active{
-    transform: translateX(-3px) scale(1);
+    transform: translateY(2px);
     cursor: pointer;
   }
 
