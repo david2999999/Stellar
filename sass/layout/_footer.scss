@@ -63,7 +63,7 @@
 
       &__input{
         background-color: white;
-        padding: 2rem;
+        padding: 1rem 2rem;
         font-size: $default-font-size;
         border-radius: 5px;
         color: $color-grey-dark;
@@ -71,7 +71,7 @@
       }
 
       &__button{
-        padding: 2rem 3rem 2rem 3rem;
+        padding: 1rem 3rem;
         color: inherit;
         font-size: $default-font-size;
         @include bg-linear-gradient-3;
