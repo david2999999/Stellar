@@ -15,7 +15,7 @@
 
   &__item{
     background-color: rgba($color-white, .8);
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    box-shadow: 0 .5rem 1.5rem rgba($color-black, .15);
     height:auto;
     margin: .2rem;
     border-radius: 3px;
@@ -44,7 +44,7 @@
     }
 
     &:hover{
-      transform: translateY(-1rem) scale(1.05);
+      transform: translateY(-1rem);
       background-color: rgba($color-white, 1);
 
     }
