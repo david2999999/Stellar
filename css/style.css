@@ -257,7 +257,7 @@ body {
     color: inherit;
     border-radius: 2px;
     background-color: rgba(255, 255, 255, 0.5);
-    border: none;
+    border: 1px solid #bdc3c7;
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
@@ -276,6 +276,7 @@ body {
     color: #777;
     border-radius: 2px;
     background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #bdc3c7;
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
@@ -546,7 +547,7 @@ a.nav__link:hover:after {
     color: inherit;
     border-radius: 2px;
     background-color: rgba(255, 255, 255, 0.5);
-    border: none;
+    border: 1px solid #bdc3c7;
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
@@ -565,6 +566,7 @@ a.nav__link:hover:after {
     color: #777;
     border-radius: 2px;
     background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #bdc3c7;
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
@@ -600,7 +602,7 @@ textarea {
   color: white;
   border-radius: 30rem;
   margin: 1rem;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
   transition: all .1s;
   backface-visibility: hidden; }
   @media only screen and (max-width: 75em) {
@@ -608,19 +610,19 @@ textarea {
       padding: 1.4rem 5rem;
       font-size: 1.6rem;
       border-radius: 28rem;
-      box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.4); } }
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4); } }
   @media only screen and (max-width: 62.5em) {
     .button-primary {
       padding: 1.3rem 5rem;
       font-size: 1.5rem;
       border-radius: 28rem;
-      box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.4); } }
+      box-shadow: 0 0.3rem 1.3rem rgba(0, 0, 0, 0.4); } }
   .button-primary:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.4);
     cursor: pointer; }
   .button-primary:active {
-    transform: translateX(-3px) scale(1);
+    transform: translateY(3px);
     cursor: pointer; }
   .button-primary:focus {
     outline: 0; }

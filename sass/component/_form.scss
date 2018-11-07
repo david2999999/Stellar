@@ -14,7 +14,7 @@
     color: inherit;
     border-radius: 2px;
     background-color: rgba($color-white, .5);
-    border:none;
+    border: 1px solid #bdc3c7;
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
@@ -39,6 +39,7 @@
     color: $color-grey-dark;
     border-radius: 2px;
     background-color: rgba($color-white, .5);
+    border: 1px solid #bdc3c7;
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;

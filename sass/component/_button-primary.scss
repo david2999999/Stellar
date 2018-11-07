@@ -4,7 +4,7 @@
   color: white;
   border-radius: 30rem;
   margin: 1rem;
-  box-shadow: 0 1rem 2rem rgba($color-black, .4);
+  box-shadow: 0 .5rem 1rem rgba($color-black, .4);
   transition: all .1s;
   backface-visibility: hidden;
 
@@ -12,25 +12,25 @@
     padding: 1.4rem 5rem;
     font-size: 1.6rem;
     border-radius: 28rem;
-    box-shadow: 0 .8rem 1.8rem rgba($color-black, .4);
+    box-shadow: 0 .5rem 1.5rem rgba($color-black, .4);
   }
 
   @include respond(tab-port) {
     padding: 1.3rem 5rem;
     font-size: 1.5rem;
     border-radius: 28rem;
-    box-shadow: 0 .6rem 1.6rem rgba($color-black, .4);
+    box-shadow: 0 .3rem 1.3rem rgba($color-black, .4);
   }
 
 
   &:hover{
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 2rem 4rem rgba($color-black, .4);
+    transform: translateY(-2px);
+    box-shadow: 0 .75rem 1.75rem rgba($color-black, .4);
     cursor: pointer;
   }
 
   &:active{
-    transform: translateX(-3px) scale(1);
+    transform: translateY(3px);
     cursor: pointer;
   }
 
